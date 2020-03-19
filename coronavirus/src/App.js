@@ -11,6 +11,7 @@ class App extends Component {
       <h1>
         Hello App
       </h1>
+      <h2>coronavirus</h2>
     </div>
     </BrowserRouter>
   );
