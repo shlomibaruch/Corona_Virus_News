@@ -1,0 +1,22 @@
+.CardarticelContainer{
+    width: 17%;
+    background-color: burlywood;
+    height: 450px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    float: right;
+    margin: 10px;
+    border: 1px solid black;
+}
+.CardarticelContainer > img {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+.contaier{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
