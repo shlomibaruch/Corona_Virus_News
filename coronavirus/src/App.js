@@ -1,7 +1,8 @@
 import React,{Component} from 'react';
 import './App.css';
 // import Articel from './components/articel/Articel'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import  GlobalCoronaPollution from './GlobalCoronaPollution-components/GlobalCoronaPollution';
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 class App extends Component {
 
@@ -9,14 +10,15 @@ class App extends Component {
     return (
     <BrowserRouter>
     <div className="App">
-      <h1>
-        Hello App
-      </h1>
+   
 
     </div>
     {/* < Switch>
         <Route exact path='/articel' render={()=><Articel>} />
+       
       </Switch> */}
+  
+     <GlobalCoronaPollution />
     </BrowserRouter>
 
   );
