@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Carsuel from '../carusel/carusel';
 import './GlobalCoronaPollution.css';
 
 export class GlobalCoronaPollution extends Component {
@@ -10,11 +11,13 @@ export class GlobalCoronaPollution extends Component {
         total_recovered: "",
         new_cases: "",
         new_deaths: "",
-        statistic_taken_at: ""
+        statistic_taken_at: "",
+        loading: false,
+        inputSearch: ""
     }
 
     componentDidMount() {
-        let country = '';
+      
         axios.get('https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php?country=&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588')
             .then(res => {
                 console.log(res.data);
@@ -31,20 +34,24 @@ export class GlobalCoronaPollution extends Component {
     }
 
 
-    handelSerch = (e) => {
-        console.log(e.target.value); 
+    handelSearch = (e) => {
+        let input = e.target.value
+        return console.log(input);
+        ;
+        
     }
 
     render() {
+    
 
 
-
-
+        
         return (
+            this.state.loading ? <Carsuel /> :
             <div className="global-corona-pollution">
                 <div>
                     <form className="form-Search" action="/action_page.php">
-                        <input onChange={this.handelSerch} type="text" placeholder="Search.." name="search" />
+                        <input onChange={this.handelSearch} type="text" placeholder="Search.." name="search" />
                         <button type="submit"><i className="fa fa-search"></i></button>
                     </form>
 
