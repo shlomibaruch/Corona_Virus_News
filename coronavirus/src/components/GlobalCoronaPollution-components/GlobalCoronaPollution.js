@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import Carusel from '../carusel/carusel';
+import Carusel from '../carusel/carusel'
+import './GlobalCoronaPollution.css';
+
 export class GlobalCoronaPollution extends Component {
 
-    state ={
+    state = {
         total_cases: "",
         total_deaths: "",
         total_recovered: "",
@@ -14,6 +16,7 @@ export class GlobalCoronaPollution extends Component {
     } 
 
     componentDidMount() {
+        let country = '';
         axios.get('https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php?country=&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588')
             .then(res => {
                 console.log(res.data);
@@ -24,10 +27,9 @@ export class GlobalCoronaPollution extends Component {
                     new_cases: res.data.new_cases,
                     new_deaths: res.data.new_deaths,
                     loading: false
-                    // statistic_taken_at: statistic_taken_at
                 });
-                
-                
+
+
             });
     }
 
@@ -42,7 +44,6 @@ export class GlobalCoronaPollution extends Component {
                     new_cases: res.data.new_cases,
                     new_deaths: res.data.new_deaths,
                     loading: false
-                    // statistic_taken_at: statistic_taken_at
                 });
                 
                 
@@ -50,33 +51,42 @@ export class GlobalCoronaPollution extends Component {
 
     }
 
-
+    handelSerch = (e) => {
+        console.log(e.target.value); 
+    }
 
     render() {
-            
-          return ( 
-              
-              this.state.loading ? <Carusel/> : <div>
-                <div>
-                    <input type='text' onChange={(e)=>{this.setState({searchInput: e.target.value})}} />
-                    <button onClick={console.log(this.state.searchInput)
-                    }>search</button>
-                    {this.state.total_cases}
-                
-                </div>
-                <table className="global-corona-pollution">
-                    <thead>
-                        <tr>
-                            <th>total cases</th>
-                            <th>total deaths</th>
-                            <th>total recovered</th>
-                            <th>new cases</th>
-                            <th>new deaths</th>
-                            <th>statistic taken at</th>
-                        </tr>
-                    </thead>
-                </table>
 
+
+        return (
+            this.state.loading ? <Carusel/> :
+            <div className="global-corona-pollution">
+                <div>
+                    <form className="form-Search" action="/action_page.php">
+                        <input onChange={this.handelSerch} type="text" placeholder="Search.." name="search" />
+                        <button type="submit"><i className="fa fa-search"></i></button>
+                    </form>
+
+
+                    <table className="table-global-pollution" >
+                        <thead>
+                            <tr>
+                                <th>total cases</th>
+                                <th>total deaths</th>
+                                <th>total recovered</th>
+                                <th>new cases</th>
+                                <th>new deaths</th>
+                            </tr>
+                            <tr>
+                                <td>{this.state.total_cases}</td>
+                                <td>{this.state.total_deaths}</td>
+                                <td>{this.state.total_recovered}</td>
+                                <td>{this.state.new_cases}</td>
+                                <td>{this.state.new_deaths}</td>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
             </div>
         )
     }

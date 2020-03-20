@@ -3,7 +3,19 @@ body {
     padding: 0;
 }
 
-/* .global-corona-pollution {
+.global-corona-pollution {
+    width: 100%;
+    text-align: center;
     
+}
+
+.table-global-pollution {
+    width: 50%;
     margin: 0 auto;
-} */
+
+}
+
+.form-Search {
+    margin: 10px;
+}
+
