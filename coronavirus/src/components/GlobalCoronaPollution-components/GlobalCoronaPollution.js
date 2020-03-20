@@ -9,7 +9,8 @@ export class GlobalCoronaPollution extends Component {
         total_recovered: "",
         new_cases: "",
         new_deaths: "",
-        loading:true
+        loading:true,
+        searchInput: ''
     } 
 
     componentDidMount() {
@@ -30,6 +31,24 @@ export class GlobalCoronaPollution extends Component {
             });
     }
 
+    search = (input) =>{
+        axios.get(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php?country=${input}&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588`)
+            .then(res => {
+                console.log(res.data);
+                this.setState({
+                    total_cases: res.data.total_cases,
+                    total_deaths: res.data.total_deaths,
+                    total_recovered: res.data.total_recovered,
+                    new_cases: res.data.new_cases,
+                    new_deaths: res.data.new_deaths,
+                    loading: false
+                    // statistic_taken_at: statistic_taken_at
+                });
+                
+                
+            });
+
+    }
 
 
 
@@ -38,7 +57,13 @@ export class GlobalCoronaPollution extends Component {
           return ( 
               
               this.state.loading ? <Carusel/> : <div>
-                <div>{this.state.total_cases}</div>
+                <div>
+                    <input type='text' onChange={(e)=>{this.setState({searchInput: e.target.value})}} />
+                    <button onClick={console.log(this.state.searchInput)
+                    }>search</button>
+                    {this.state.total_cases}
+                
+                </div>
                 <table className="global-corona-pollution">
                     <thead>
                         <tr>
