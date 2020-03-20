@@ -4,11 +4,17 @@ import Articel from './components/articel/Articel'
 import  GlobalCoronaPollution from './components/GlobalCoronaPollution-components/GlobalCoronaPollution';
 import Home from './components/home/Home'
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import axios from 'axios';
 
 
 class App extends Component {
   state = {
-    artical: []
+    artical: [],
+    worldCases: ''
+  }
+  
+  articelData = (data) =>{
+    this.setState({artical : data})
   }
   render(){
 
@@ -23,14 +29,25 @@ class App extends Component {
 
     </div>
     <Switch >
-           <Route exact path='/' component={Home}  />
-        <Route exact path='/articel' component={Articel} />
-        <Route exact path='/globalCoronaPollution' component={GlobalCoronaPollution} />
+           <Route exact path='/' render={() => <Home articalNews = {this.state.worldCases} /> }/>
+        <Route exact path='/articel' render={()=> <Articel artical ={ this.articelData } />}/>
+        <Route exact path='/globalCoronaPollution' render={()=> <GlobalCoronaPollution  />} />
     </Switch >
     </BrowserRouter>
   
   );
   }
+  componentDidMount() {
+    axios.get('https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php?country=&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588')
+        .then(res => {
+            console.log(res.data);
+            this.setState({
+              worldCases:res.data
+            });
+
+
+        });
+}
 
 }
 

@@ -12,11 +12,11 @@ export class GlobalCoronaPollution extends Component {
         new_cases: "",
         new_deaths: "",
         loading:true,
-        searchInput: ''
+        searchInput: '',
+        caseByContry : []
     } 
 
     componentDidMount() {
-        let country = '';
         axios.get('https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php?country=&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588')
             .then(res => {
                 console.log(res.data);
@@ -34,16 +34,11 @@ export class GlobalCoronaPollution extends Component {
     }
 
     search = (input) =>{
-        axios.get(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php?country=${input}&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588`)
+        axios.get(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=${input}&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588`)
             .then(res => {
                 console.log(res.data);
                 this.setState({
-                    total_cases: res.data.total_cases,
-                    total_deaths: res.data.total_deaths,
-                    total_recovered: res.data.total_recovered,
-                    new_cases: res.data.new_cases,
-                    new_deaths: res.data.new_deaths,
-                    loading: false
+                    caseByContry: res.data.latest_stat_by_country
                 });
                 
                 
@@ -51,20 +46,20 @@ export class GlobalCoronaPollution extends Component {
 
     }
 
-    handelSerch = (e) => {
-        console.log(e.target.value); 
-    }
-
     render() {
 
-
+        console.log(this.state.caseByContry);
+        
         return (
             this.state.loading ? <Carusel/> :
             <div className="global-corona-pollution">
                 <div>
                     <form className="form-Search" action="/action_page.php">
-                        <input onChange={this.handelSerch} type="text" placeholder="Search.." name="search" />
-                        <button type="submit"><i className="fa fa-search"></i></button>
+                        
+                        <input onChange={(e) => { this.setState({searchInput: e.target.value}) }} type="text" placeholder="Search.." name="search" />
+                        <button  onClick={(e)=> {
+                            e.preventDefault()
+                            this.search(this.state.searchInput)}}><i className="fa fa-search"></i></button>
                     </form>
 
 
@@ -86,6 +81,7 @@ export class GlobalCoronaPollution extends Component {
                             </tr>
                         </thead>
                     </table>
+                    
                 </div>
             </div>
         )
