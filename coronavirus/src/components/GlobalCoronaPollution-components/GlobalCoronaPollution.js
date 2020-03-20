@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-
+import Carusel from '../carusel/carusel';
 export class GlobalCoronaPollution extends Component {
 
     state ={
@@ -9,7 +9,7 @@ export class GlobalCoronaPollution extends Component {
         total_recovered: "",
         new_cases: "",
         new_deaths: "",
-        statistic_taken_at: ""
+        loading:true
     } 
 
     componentDidMount() {
@@ -22,7 +22,8 @@ export class GlobalCoronaPollution extends Component {
                     total_recovered: res.data.total_recovered,
                     new_cases: res.data.new_cases,
                     new_deaths: res.data.new_deaths,
-                    statistic_taken_at: statistic_taken_at
+                    loading: false
+                    // statistic_taken_at: statistic_taken_at
                 });
                 
                 
@@ -33,11 +34,11 @@ export class GlobalCoronaPollution extends Component {
 
 
     render() {
-       
-
-        return (
-            <div>
-                <div>{this.state.new_cases}</div>
+            
+          return ( 
+              
+              this.state.loading ? <Carusel/> : <div>
+                <div>{this.state.total_cases}</div>
                 <table className="global-corona-pollution">
                     <thead>
                         <tr>

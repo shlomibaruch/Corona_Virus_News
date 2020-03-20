@@ -1,45 +1,37 @@
 import React,{Component} from 'react';
-import axios from 'axios'
 import './App.css';
-<<<<<<< HEAD
-// import Articel from './components/articel/Articel'
-import  GlobalCoronaPollution from './GlobalCoronaPollution-components/GlobalCoronaPollution';
+import GlobalCoronaPollution from './components/GlobalCoronaPollution-components/GlobalCoronaPollution';
+import Articel from './components/articel/Articel';
+import Home from './components/home/Home'
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-=======
-import Articel from './components/articel/Articel'
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-
->>>>>>> dfc9cd4b1844dd55a803d3b3b5fe7d1dc44fb833
 
 class App extends Component {
-
+  state = {
+    artical: []
+  }
   render(){
     return (
-    <BrowserRouter>
-    <div className="App">
-<<<<<<< HEAD
-   
 
-    </div>
-    {/* < Switch>
-        <Route exact path='/articel' render={()=><Articel>} />
-       
-      </Switch> */}
-  
-     <GlobalCoronaPollution />
-=======
-      <ul>
+    <BrowserRouter>
+
+
+    <div className="App">
+
+     <ul>
+        <li><Link to="/"> Home</Link></li>
         <li><Link to="/articel"> Articel</Link></li>
-        {/* <li><Link to="/globalcoronapollution"> Pollution</Link></li> */}
+        <li><Link to="/globalcoronapollution"> Pollution</Link></li>
       </ul>
 
     </div>
+   
+    
     <Switch>
-      <Route exact path="/articel" component={Articel}/>
-      {/* <Route exact path="/globalcoronapollution" component={globalcoronapollution}/> */}
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/articel" component={Articel} artical = {this.state.artical}/>
+      <Route exact path="/GlobalCoronaPollution" component={GlobalCoronaPollution}/>
     </Switch>
    
->>>>>>> dfc9cd4b1844dd55a803d3b3b5fe7d1dc44fb833
     </BrowserRouter>
 
   );
