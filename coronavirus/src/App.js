@@ -9,12 +9,17 @@ import axios from 'axios';
 
 class App extends Component {
   state = {
+<<<<<<< HEAD
     artical: [],
     worldCases: ''
   }
   
   articelData = (data) =>{
     this.setState({artical : data})
+=======
+    artical: []
+
+>>>>>>> 41dad35cd9d8d69aeb67d6a74e4e6fef4d303a4f
   }
   render(){
 

@@ -11,10 +11,17 @@ export class GlobalCoronaPollution extends Component {
         total_recovered: "",
         new_cases: "",
         new_deaths: "",
+<<<<<<< HEAD
         loading:true,
         searchInput: '',
         caseByContry : []
     } 
+=======
+        loading: true,
+        searchInput: '',
+        countryArr: []
+    }
+>>>>>>> 41dad35cd9d8d69aeb67d6a74e4e6fef4d303a4f
 
     componentDidMount() {
         axios.get('https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php?country=&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588')
@@ -33,6 +40,7 @@ export class GlobalCoronaPollution extends Component {
             });
     }
 
+<<<<<<< HEAD
     search = (input) =>{
         axios.get(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=${input}&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588`)
             .then(res => {
@@ -42,17 +50,50 @@ export class GlobalCoronaPollution extends Component {
                 });
                 
                 
+=======
+    search = (input) => {
+        axios.get(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=${input}&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588`)
+            .then(res => {
+                console.log(res.data);
+                this.setState({ countryArr: res.data.latest_stat_by_country });
+>>>>>>> 41dad35cd9d8d69aeb67d6a74e4e6fef4d303a4f
             });
 
     }
 
-    render() {
+<<<<<<< HEAD
+=======
 
+
+>>>>>>> 41dad35cd9d8d69aeb67d6a74e4e6fef4d303a4f
+    render() {
+        console.log(this.state.countryArr);
+
+        const elements = this.state.countryArr.map((element, index) => {
+
+<<<<<<< HEAD
         console.log(this.state.caseByContry);
         
+=======
+            return <table key={index} className="table-country-pollution-numbers" >
+                <thead>
+                    <tr >
+                        <td>{element.country_name}</td>
+                        <td>{element.total_cases}</td>
+                        <td>{element.total_deaths}</td>
+                        <td>{element.total_recovered}</td>
+                        <td>{element.serious_critical}</td>
+                    </tr>
+                </thead>
+            </table>
+
+          
+        });
+>>>>>>> 41dad35cd9d8d69aeb67d6a74e4e6fef4d303a4f
         return (
-            this.state.loading ? <Carusel/> :
+            this.state.loading ? <Carusel /> :
             <div className="global-corona-pollution">
+<<<<<<< HEAD
                 <div>
                     <form className="form-Search" action="/action_page.php">
                         
@@ -82,8 +123,57 @@ export class GlobalCoronaPollution extends Component {
                         </thead>
                     </table>
                     
+=======
+                <h1>Global Corona Pollution</h1>
+                <table className="table-global-pollution" >
+                    <thead>
+                        <tr className="table-global-pollution-head">
+                            <th>Total Cases</th>
+                            <th>Total Deaths</th>
+                            <th>Total Recovered</th>
+                            <th>New Cases</th>
+                            <th>New Deaths</th>
+                        </tr>
+                        <tr className="table-global-pollution-head-numbers">
+                            <td>{this.state.total_cases}</td>
+                            <td>{this.state.total_deaths}</td>
+                            <td>{this.state.total_recovered}</td>
+                            <td>{this.state.new_cases}</td>
+                            <td>{this.state.new_deaths}</td>
+                        </tr>
+                    </thead>
+                </table>
+
+
+                
+                    <div>
+                        <form className="form-Search" action="/action_page.php">
+                            <input onChange={(e) => { this.setState({ searchInput: e.target.value }) }} type="text" placeholder="Search Country.." name="search" />
+                            <button onClick={(e) => {
+                                e.preventDefault()
+                                this.search(this.state.searchInput)
+                            }} type="submit"><i className="fa fa-search"></i></button>
+
+                        </form>
+
+
+                        <table className="table-country-pollution" >
+                            <thead>
+                                <tr>
+                                    <th>Country Name</th>
+                                    <th>Total Cases</th>
+                                    <th>Total Deaths</th>
+                                    <th>Total Recovered</th>
+                                    <th>Serious Ritical</th>
+                                </tr>
+
+                            </thead>
+                        </table>
+
+                    </div>
+                    {elements}
+>>>>>>> 41dad35cd9d8d69aeb67d6a74e4e6fef4d303a4f
                 </div>
-            </div>
         )
     }
 }

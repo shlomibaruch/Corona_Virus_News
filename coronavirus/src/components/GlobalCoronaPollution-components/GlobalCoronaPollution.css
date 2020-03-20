@@ -10,12 +10,33 @@ body {
 }
 
 .table-global-pollution {
+    border: 2px rgb(0, 0, 0,0.1) solid;
+    background-color: rgb(128, 128, 128,0.3);
+    padding: 5px;
+    width: 50%;
+    margin: 0 auto;
+    font-size: 20PX;
+
+}
+
+.form-Search {
+    margin: 20px;
+}
+
+.table-country-pollution {
+  
     width: 50%;
     margin: 0 auto;
 
 }
 
-.form-Search {
-    margin: 10px;
+.table-global-pollution-head-numbers{
+    color: rgb(255, 0, 0, 0.8)
+}
+
+.table-country-pollution-numbers {
+    width: 50%;
+    margin: 0 auto;
+    color: red;
 }
 
