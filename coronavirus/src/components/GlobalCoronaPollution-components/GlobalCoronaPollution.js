@@ -24,7 +24,6 @@ export class GlobalCoronaPollution extends Component {
                     total_recovered: res.data.total_recovered,
                     new_cases: res.data.new_cases,
                     new_deaths: res.data.new_deaths,
-
                 });
 
 

@@ -13,10 +13,19 @@
     width: 100%;
     height: 200px;
     display: flex;
+    
 }
 .contaier{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+}
+.CardarticelContainer > span {
+    font-size: small;
+}
+.title{
+    position: relative;
+}
+.searchInput{
+    display: inline;
 }

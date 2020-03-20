@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import axios from 'axios'
 import './App.css';
 // import Articel from './components/articel/Articel'
 import  GlobalCoronaPollution from './GlobalCoronaPollution-components/GlobalCoronaPollution';
@@ -7,10 +6,15 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 
 
 class App extends Component {
-
+  state = {
+    artical: []
+  }
   render(){
     return (
+
     <BrowserRouter>
+
+
     <div className="App">
    
 
