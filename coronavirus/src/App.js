@@ -3,6 +3,7 @@ import './App.css';
 import Articel from './components/articel/Articel'
 import  GlobalCoronaPollution from './components/GlobalCoronaPollution-components/GlobalCoronaPollution';
 import Home from './components/home/Home'
+import Footer from './components/Footer-component/Footer';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -26,13 +27,15 @@ class App extends Component {
       <Link to='/articel' >Articel</Link>
       <Link to='/globalCoronaPollution' >Pollution</Link>
    
-
+     
     </div>
+
     <Switch >
            <Route exact path='/' render={() => <Home articalNews = {this.state.worldCases} /> }/>
         <Route exact path='/articel' render={()=> <Articel artical ={ this.articelData } />}/>
         <Route exact path='/globalCoronaPollution' render={()=> <GlobalCoronaPollution  />} />
     </Switch >
+     <Footer className="footer" />
     </BrowserRouter>
   
   );

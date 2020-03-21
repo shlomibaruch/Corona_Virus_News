@@ -2,4 +2,19 @@ body {
     background-image: url('https://cdn.pixabay.com/photo/2020/03/11/23/50/coronavirus-4923544__340.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+   
+}
+
+/* .App {
+    min-height: 0 auto;
+}  */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
 }
