@@ -10,20 +10,14 @@ export default class Articel extends Component {
         inputsearch: '',
         loading: true
     }
+    
     componentDidMount() {
+        this.setState({ loading:false })
         
-        axios.get('http://newsapi.org/v2/everything?q=coronavirus&from=2020-02-20&sortBy=publishedAt&apiKey=17d57b58c3df4dd48364cbc30503849b')
-            .then(res => {
-                // console.log(res.data.articles);
-                this.setState({ articel: res.data.articles, loading:false })
-                this.props.artical(res.data.articles)
-
-                
-            })
     }
 
     serach = (inputsearch) => {
-        axios.get(`http://newsapi.org/v2/everything?q=${inputsearch}&from=2020-02-20&sortBy=publishedAt&apiKey=17d57b58c3df4dd48364cbc30503849b`)
+        axios.get(`http://newsapi.org/v2/everything?q=${inputsearch}&from=2020-03-20&to=2020-03-20&sortBy=popularity&apiKey=17d57b58c3df4dd48364cbc30503849b`)
             .then(res => {
                 // console.log(res.data.articles);
                 this.setState({ articel: res.data.articles })
@@ -34,8 +28,9 @@ export default class Articel extends Component {
 
 
     render() {
+        console.log('this.props.artical',this.props.articals);
         
-        let NEWS = this.state.articel.map((item, index) => {
+        let NEWS = this.props.articals.map((item, index) => {
             // console.log('.articel.map',item.urlToImage);
             
             return <div key={index} className='CardarticelContainer '>
