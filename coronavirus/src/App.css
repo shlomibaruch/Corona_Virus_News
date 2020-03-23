@@ -1,17 +1,26 @@
 body {
-    background-image: url('https://cdn.pixabay.com/photo/2020/03/11/23/50/coronavirus-4923544__340.jpg');
+    background-image: url('https://cdn.pixabay.com/photo/2020/03/12/06/12/coronavirus-4924022_960_720.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; 
+    background-color: black;
+    background-attachment: fixed;
+    background-position: center;
+    
    
+
 }
 
+.App {
+    height: max-content;
+} 
 
-.page-footer{
-    background-color: slategrey;
-   
-    
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0,0.8);
+    color: white;
+    text-align: center;
+    margin-top: 2%;
 }
-
-/* .container {
-    
-} */

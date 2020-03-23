@@ -1,43 +1,48 @@
-import React, { Component } from 'react'
+import React from 'react'
+import './GlobalCoronaPollution.css'
+export default function HistoryGlobalCoronaPollution(props) {
 
+    let results = [];
 
-export class HistoryGlobalCoronaPollution extends Component {
+    for (let i = 0; i < props.searchData.length - 1; i++) {
+        if (props.searchData[i + 1].total_cases !== props.searchData[i].total_cases) {
 
-    state = {
-        history: []
-    }
+            let UpdateVirusInfectionData = {
+                country_name: props.searchData[i].country_name,
+                total_cases: props.searchData[i].total_cases,
+                serious_critical: props.searchData[i].serious_critical,
+                record_date: props.searchData[i].record_date
 
-
-     findDuplicates = (arr) => {
-         // You can define the comparing function here. 
-        // JS by default uses a crappy string compare.
-        // (we use slice to clone the array so the
-        // original array won't be modifie)
-        let results = [];
-        for (let i = 0; i < arr.length - 1; i++) {
-          if (arr[i + 1].total_cases !== arr[i].total_cases) {
-            results.push(arr[i]);
-          }
+            }
+            results.push(UpdateVirusInfectionData);
         }
-
-        return results;
-      }
-   
-
-    render() {
-
-          
-          let a = this.findDuplicates(this.props.historyArr)
-          console.log('function',a);
-          
-
-     console.log(this.props.historyArr);
-        return (
-            <div>
-                
-            </div>
-        )
     }
+    let showHistoryRecord = results.map((record, index) => {
+        return <tr key={index}>
+            <th scope="row">{index + 1}</th>
+            <td>{record.country_name}</td>
+            <td>{record.total_cases}</td>
+            <td>{record.serious_critical}</td>
+            <td>{record.record_date}</td>
+        </tr>
+    })
+    return (
+        <div className= { props.flag ? 'HistoryContainer' : 'HistoryContainerNone' }>
+            <table className="table ">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">conutry</th>
+                        <th scope="col">total cases</th>
+                        <th scope="col">serious critical</th>
+                        <th scope="col">record date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {showHistoryRecord}
+                </tbody>
+            </table>
+        </div>
+    )
 }
 
-export default HistoryGlobalCoronaPollution;
