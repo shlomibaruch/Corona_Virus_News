@@ -1,6 +1,4 @@
-.HomeContainer{
 
-}
 .text{
     position: relative;
     top: 100px;
@@ -36,7 +34,7 @@
   height: 100px;
 }
 .newsContainer{
-  margin-top: 15%;
+  margin-top: 10%;
   background-color: rgba(0, 0, 0, 0.445);
   height: 500px;
 }
