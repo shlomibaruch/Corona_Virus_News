@@ -7,11 +7,11 @@ body {
     color: white;
     width: 100%;
     text-align: center;
+    min-height: 550px;
     
 }
 
 .table-global-pollution {
-
     border: 2px rgb(0, 0, 0,0.1) solid;
     background-color: rgb(128, 128, 128,0.3);
     box-shadow: 10px 10px 10px #888888;
@@ -57,3 +57,13 @@ body {
     font-weight: bold;
 }
 
+.HistoryContainer{
+    margin-top: 5%;
+}
+.HistoryContainerNone{
+display: none;
+}
+.table{
+    background-image: linear-gradient(black, rgba(80, 67, 67, 0.863), rgb(116, 27, 27));
+    color: white;
+}

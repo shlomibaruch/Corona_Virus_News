@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-import Carusel from '../carusel/carusel'
+import Carusel from '../carusel/carusel';
+import HistoryGlobalCoronaPollution from './HistoryGlobalCoronaPollution'
 import './GlobalCoronaPollution.css';
 
 export class GlobalCoronaPollution extends Component {
@@ -13,7 +14,9 @@ export class GlobalCoronaPollution extends Component {
         new_deaths: "",
         loading:true,
         searchInput: '',
-        countryArr : []
+        countryArr : [],
+        historydata: [],
+        flag: false
     } 
 
     componentDidMount() {
@@ -36,20 +39,27 @@ export class GlobalCoronaPollution extends Component {
     search = (input) =>{
         axios.get(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=${input}&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588`)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 this.setState({
                     countryArr: res.data.latest_stat_by_country
                 });
                 
-                
             });
+    }
+    History = (input) =>{ 
+        axios.get(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_particular_country.php?country=${input}&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588`)
+        .then(res => {
+            console.log(res.data);
+            this.setState({historydata: res.data.stat_by_country})
+        })
 
     }
 
     render() {
-        console.log(this.state.countryArr);
-      
 
+
+     
+        
         const elements = this.state.countryArr.map((element, index) => {
 
             return <table key={index} className="table-country-pollution-numbers" >
@@ -93,10 +103,11 @@ export class GlobalCoronaPollution extends Component {
                 
                     <div>
                         <form className="form-Search" action="/action_page.php">
-                            <input className="input" onChange={(e) => { this.setState({ searchInput: e.target.value }) }} type="text" placeholder="Search Country.." name="search" />
+                            <input className="input" onChange={(e) => { this.setState({ searchInput: e.target.value, flag: !false }) }} type="text" placeholder="Search Country.." name="search" />
                             <button className="button" onClick={(e) => {
                                 e.preventDefault()
                                 this.search(this.state.searchInput)
+                                this.History(this.state.searchInput)
                             }} type="submit"><i className="fa fa-search"></i></button>
 
                         </form>
@@ -117,6 +128,7 @@ export class GlobalCoronaPollution extends Component {
 
                     </div>
                     {elements}
+                    <HistoryGlobalCoronaPollution searchData={ this.state.historydata } flag={this.state.flag}/>
                 </div>
         )
     }

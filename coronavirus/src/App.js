@@ -12,15 +12,16 @@ import Nav from './components/Nav/Nav'
 class App extends Component {
   state = {
     articel: [],
-    worldCases: ''
+    worldCases: '',
+    homeArticles: []
   }
   
   articelData = (data) =>{
     this.setState({artical : data})
   }
   render(){
-    // console.log('artical from app',this.state.articel);
-    
+    console.log('artical from app',this.state.articel);
+
     return (
 
     <BrowserRouter>
@@ -31,7 +32,10 @@ class App extends Component {
     </div>
 
     <Switch >
-           <Route exact path='/' render={() => <Home articalNews = {this.state.worldCases} /> }/>
+           <Route exact path='/' render={() => <Home 
+           articalTotalCases = {this.state.worldCases} 
+           articalIsraelNews = {this.state.homeArticles.slice(0,10)}
+           /> }/>
         <Route exact path='/articel' render={()=> <Articel artical ={ this.articelData } articals ={this.state.articel} />}/>
         <Route exact path='/globalCoronaPollution' render={()=> <GlobalCoronaPollution  />} />
     </Switch >
@@ -44,7 +48,7 @@ class App extends Component {
   componentDidMount() {
     axios.get('https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php?country=&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588')
         .then(res => {
-            console.log(res.data);
+            // console.log(res.data);
             this.setState({
               worldCases:res.data
             });
@@ -54,7 +58,12 @@ class App extends Component {
             // console.log(res.data.articles);
             this.setState({ articel: res.data.articles })
             
-        })
+        });
+        axios.get('http://newsapi.org/v2/top-headlines?sources=google-news-is&apiKey=17d57b58c3df4dd48364cbc30503849b')
+        .then(res => {
+          this.setState({ homeArticles: res.data.articles })
+            
+        });
 }
 
 }
