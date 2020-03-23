@@ -1,6 +1,6 @@
 .text{
     position: relative;
-    top: 100px;
+    top: 50px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -10,9 +10,9 @@
     background-image: linear-gradient(rgba(255, 255, 255, 0.842),rgba(128, 128, 128, 0.623), rgba(53, 52, 52, 0.199));
   border: 0.5px solid black;
   border-radius: 5px;
-    background-color: rgb(63, 63, 63);
-    box-shadow: 0 0 0 0.75rem #7c7b72,
-              0 0 0 1.5rem #ffffff,
+    background-color: rgb(165, 136, 136);
+    box-shadow: 0 0 0 0.75rem rgb(20, 19, 10,0.6),
+              0 0 0 1.5rem rgb(116, 111, 111,0.3),
               0 0.25rem 0.375rem 1.65rem rgba(2, 2, 2, 0.5);
 }
 .text > p{
@@ -22,13 +22,58 @@
     font-family: Arial, Helvetica, sans-serif;
     
 }
+
+
+
+
 .news{
   
-  display: inline-flex;
-  justify-content: space-around;
-  margin: 10px;
-  height: 320px;
+  margin-top: 20px;
+  /* display: inline-flex;
+  justify-content: space-around; */
+  /* margin: 10px; */
+  /* height: 320px; */
 }
-.card > .img {
+/* .card > .img {
   height: 100px;
+} */
+
+#carouselExampleSlidesOnly {
+  margin-top: 100px;
+}
+
+/* .carosl-items{
+  display: flex;
+  margin-top: 100px;
+  position: relative;
+  width: 90%;
+ 
+  box-shadow: 10px 10px 10px black;
+
+
+} */
+
+
+.carosl-items{
+ 
+  display: flex;
+  width: 100%;
+  
+}
+
+
+.carosl-Img {
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 500px;
+  
+  
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  color: rgb(10, 10, 10);
+  font-weight: bold;
 }

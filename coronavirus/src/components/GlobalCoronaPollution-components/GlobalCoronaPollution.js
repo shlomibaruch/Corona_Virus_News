@@ -16,8 +16,12 @@ export class GlobalCoronaPollution extends Component {
         searchInput: '',
         countryArr: [],
         historyArr: [],
-        flag: false
+        flag: false,
+        isSearch: false
+
+
     }
+
 
     componentDidMount() {
         axios.get('https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php?country=&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588')
@@ -80,7 +84,7 @@ export class GlobalCoronaPollution extends Component {
         return (
             this.state.loading ? <Carusel /> :
                 <div className="global-corona-pollution">
-                    <h1>Global Corona Pollution</h1>
+
                     <table className="table-global-pollution" >
                         <thead>
                             <tr className="table-global-pollution-head">
@@ -110,29 +114,31 @@ export class GlobalCoronaPollution extends Component {
                                 this.search(this.state.searchInput)
                                 this.History(this.state.searchInput)
                                 this.setState({ flag: !false })
+                                this.setState({isSearch: true})
                             }} type="submit"><i className="fa fa-search"></i></button>
 
                         </form>
 
+                        <div >
 
-                        <table className="table-country-pollution" >
-                            <thead>
+                            <table className={this.state.isSearch? 'table-country-pollution' : 'table-country-pollutionNone'}>
+                                <thead>
 
-                                <tr>
-                                    <th>Country Name</th>
-                                    <th>Total Cases</th>
-                                    <th>Total Deaths</th>
-                                    <th>Total Recovered</th>
-                                    <th>Serious Critical</th>
-                                    
-                                </tr>
+                                    <tr >
+                                        <th>Country Name</th>
+                                        <th>Total Cases</th>
+                                        <th>Total Deaths</th>
+                                        <th>Total Recovered</th>
+                                        <th>Serious Critical</th>
 
-                            </thead>
-                            < tbody>
-                                {elements}
-                            </ tbody>
-                        </table>
+                                    </tr>
 
+                                </thead>
+                                < tbody>
+                                    {elements}
+                                </ tbody>
+                            </table>
+                        </div>
                     </div>
 
                     <HistoryGlobalCoronaPollution searchData={this.state.historyArr} flag={this.state.flag} />
