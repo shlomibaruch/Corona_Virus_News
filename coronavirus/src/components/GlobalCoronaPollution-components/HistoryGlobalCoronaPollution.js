@@ -30,6 +30,10 @@ export default function HistoryGlobalCoronaPollution(props) {
 
     return (
         <div className= { props.flag ? 'HistoryContainer' : 'HistoryContainerNone' }>
+            <div className='HistoryHeader' >
+
+            <h1 >History Record</h1>
+            </div>
 
             <table className="table ">
 

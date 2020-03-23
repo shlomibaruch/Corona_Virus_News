@@ -1,3 +1,6 @@
+.HomeContainer{
+
+}
 .text{
     position: relative;
     top: 100px;
@@ -31,4 +34,21 @@
 }
 .card > .img {
   height: 100px;
+}
+.newsContainer{
+  margin-top: 15%;
+  background-color: rgba(0, 0, 0, 0.445);
+  height: 500px;
+}
+.carouselContainer{
+  color: white;
+  width: 90%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 5%;
+}
+.carouselContainer > img {
+  height: 450px;
 }
