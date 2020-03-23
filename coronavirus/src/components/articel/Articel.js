@@ -46,7 +46,22 @@ export default class Articel extends Component {
                 </p>
             </div>
         })
-
+        // let NEWSearch = this.props.articals.map((item, index) => {
+        //     // console.log('.articel.map',item.urlToImage);
+            
+        //     return <div key={index} className='CardarticelContainer '>
+        //         <img src={item.urlToImage === null ? 'https://cdn.pixabay.com/photo/2020/03/15/17/22/mask-4934337__340.jpg' : item.urlToImage} alt='coronavirusPic' />
+        //         <div className='title'>
+        //             <span>{item.title}</span><br/>
+    
+        //         </div>
+        //         <p style={{ 'width': '50%', 'borderTop': '1px solid black' }}>
+        //         <span >
+        //              <a href={item.url} target='_blank' >Read More</a>
+        //         </span>
+        //         </p>
+        //     </div>
+        // })
 
         return (
             <div>

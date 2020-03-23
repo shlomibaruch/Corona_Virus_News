@@ -25,10 +25,14 @@ export default function HistoryGlobalCoronaPollution(props) {
             <td>{record.serious_critical}</td>
             <td>{record.record_date}</td>
         </tr>
-    })
+    });
+
+
     return (
         <div className= { props.flag ? 'HistoryContainer' : 'HistoryContainerNone' }>
+
             <table className="table ">
+
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -38,10 +42,13 @@ export default function HistoryGlobalCoronaPollution(props) {
                         <th scope="col">record date</th>
                     </tr>
                 </thead>
+                
                 <tbody>
                     {showHistoryRecord}
                 </tbody>
+
             </table>
+
         </div>
     )
 }
