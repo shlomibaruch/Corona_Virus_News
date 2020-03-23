@@ -1,3 +1,4 @@
+
 .text{
     position: relative;
     top: 50px;
@@ -26,54 +27,25 @@
 
 
 
-.news{
-  
-  margin-top: 20px;
-  /* display: inline-flex;
-  justify-content: space-around; */
-  /* margin: 10px; */
-  /* height: 320px; */
-}
-/* .card > .img {
-  height: 100px;
-} */
 
 #carouselExampleSlidesOnly {
   margin-top: 100px;
 }
-
-/* .carosl-items{
-  display: flex;
-  margin-top: 100px;
-  position: relative;
-  width: 90%;
- 
-  box-shadow: 10px 10px 10px black;
-
-
-} */
-
-
-.carosl-items{
- 
-  display: flex;
-  width: 100%;
-  
-}
-
-
-.carosl-Img {
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
+.newsContainer{
+  margin-top: 8%;
+  background-color: rgba(0, 0, 0, 0.445);
   height: 500px;
-  
-  
-}
 
-.title {
-  flex: 1;
-  text-align: center;
-  color: rgb(10, 10, 10);
-  font-weight: bold;
+}
+.carouselContainer{
+  color: white;
+  width: 70%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 15%;
+}
+.carouselContainer > img {
+  height: 450px;
 }

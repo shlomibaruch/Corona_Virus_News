@@ -32,11 +32,13 @@ body {
 
 .input {
   color: white;
-  background-color: rgb(0, 128, 128, 0.1);
+  background-color: rgb(0, 128, 128,0.1);
+  width: 300px;
 }
 
 .button {
-   background-color: rgba(14, 187, 14, 0.5);
+   background-color: rgba(2, 37, 2);
+   color: white;
 }
 
 .table-country-pollution {
@@ -93,3 +95,10 @@ display: none;
 }
 
 
+.HistoryHeader{
+    margin: 5px;
+    color: black;
+    background-color: rgba(255, 235, 205, 0.459);
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+}
