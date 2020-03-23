@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import Carusel from '../carusel/carusel'
+import HistoryGlobalCoronaPollution from './HistoryGlobalCoronaPollution';
 import './GlobalCoronaPollution.css';
 
 export class GlobalCoronaPollution extends Component {
@@ -13,7 +14,8 @@ export class GlobalCoronaPollution extends Component {
         new_deaths: "",
         loading:true,
         searchInput: '',
-        countryArr : []
+        countryArr : [],
+        historyArr : []
     } 
 
     componentDidMount() {
@@ -39,6 +41,19 @@ export class GlobalCoronaPollution extends Component {
                 console.log(res.data);
                 this.setState({
                     countryArr: res.data.latest_stat_by_country
+                });
+                
+                
+            });
+
+    }
+
+    History = (input) =>{
+        axios.get(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_particular_country.php?country=${input}&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588`)
+            .then(res => {
+                // console.log(res.data);
+                this.setState({
+                    historyArr: res.data.stat_by_country
                 });
                 
                 
@@ -97,6 +112,7 @@ export class GlobalCoronaPollution extends Component {
                             <button className="button" onClick={(e) => {
                                 e.preventDefault()
                                 this.search(this.state.searchInput)
+                                this.History(this.state.searchInput)
                             }} type="submit"><i className="fa fa-search"></i></button>
 
                         </form>
@@ -117,6 +133,7 @@ export class GlobalCoronaPollution extends Component {
 
                     </div>
                     {elements}
+                    <HistoryGlobalCoronaPollution historyArr={this.state.historyArr}/> 
                 </div>
         )
     }

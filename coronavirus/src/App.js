@@ -13,6 +13,7 @@ class App extends Component {
   state = {
     articel: [],
     worldCases: ''
+ 
   }
   
   articelData = (data) =>{
