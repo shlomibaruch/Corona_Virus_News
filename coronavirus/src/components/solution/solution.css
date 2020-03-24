@@ -10,6 +10,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0;
+  margin: 5px;
+  /* padding: 5px; */
+  border-bottom-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-style: groove;
 }
 /* .one > p{
   color: white;
@@ -18,13 +24,7 @@
 /* .one:hover{
   background-color: rgba(0, 0, 0, 0.534);
 } */
-.s{
-  position: relative;
-  width: 100%;
-  display: flex;
-  background-color: ivory;
-  height: 100px;
-}
+
 
 /* .b {
   position: relative;
@@ -36,21 +36,34 @@
   /* height: 50px; */
 /* } */ 
 
-.s:hover .sb {
-  opacity: 0.3;
+.solutionColumn:hover .sb {
+  opacity: 1;
+ display: flex;
+ width: inherit;
+
 }
 
-.s:hover .b {
-  opacity: 1;
-}
 
 .sb {
-/* position: absolute; */
-width: 100%;
- background-color: tomato;
- display: flex;
- justify-content: center;
- /* top:0; */
-/* height: 100px; */
-  /* padding: 16px 32px; */
+display: none;
+width: inherit;
+height: 70%;
+ background-color: rgba(0, 0, 0, 0.562);
+ justify-content: start;
+ align-items: center;
+ flex-direction: column;
+ border-bottom-left-radius: 25px;
+ border-top-right-radius: 25px;
+}
+#washHands{
+  background-image: url('https://www.clalit.co.il/he/your_health/family/PublishingImages/Pages/covid19_prevention/hands2.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
+#towMeter{
+  background-image: url('https://cdn.pixabay.com/photo/2015/08/13/19/39/children-887393__340.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 }
