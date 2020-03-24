@@ -68,11 +68,17 @@ export default class Articel extends Component {
             <div>
                 <div className='searchInput'>
                     <input type="text" onChange={(e) => {this.setState({inputsearch: e.target.value}) }} />
-                    <button onClick={() => {
+                    {/* <button onClick={() => {
                         this.setState({loading: false}) ;
                         this.serach(this.state.inputsearch);
-                         }}>Search</button>
+                         }}>Search</button> */}
+                         <button className="button" onClick={(e) => {
+                                 this.setState({loading: false}) ;
+                                 this.serach(this.state.inputsearch);
+                            }} type="submit"><i className="fa fa-search"></i></button>
                 </div>
+
+                
 
                 <div className='contaier'>
 

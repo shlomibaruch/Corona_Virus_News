@@ -9,3 +9,106 @@
     text-align: center;
 }
 
+
+
+
+
+
+
+.mb-5 {  
+display: flex;
+justify-content: flex-start;
+    
+}
+
+.flex1 {
+    width: 50%;
+}
+
+.flex2 {
+    width: 50%;
+}
+
+
+.fa-linkedin-in {
+    background-color: rgb(6, 129, 167,0.5);
+    padding: 3px;
+    border: rgb(255, 255, 255,0.5) 2px solid;
+    border-radius: 5px;
+}
+
+.fa-github {
+    background-color: rgb(6, 129, 167, 0.1);
+    padding: 3px;
+    border: rgb(255, 255, 255,0.5) 2px solid;
+    border-radius: 5px;
+}
+
+
+.fa-envelope {
+    background-color: rgb(6, 129, 167,0.3);
+    padding: 3px;
+    border: rgb(255, 255, 255,0.5) 2px solid;
+    border-radius: 5px;
+}
+
+
+
+  @media (prefers-reduced-motion: no-preference) {
+    .fa-linkedin-in:hover {
+      animation: fa-linkedin-in-spin infinite 5s linear;
+    }
+  }
+  
+@keyframes fa-linkedin-in-spin  {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  @media (prefers-reduced-motion: no-preference) {
+    .fa-github:hover{
+      animation: fa-github-spin infinite 5s linear;
+    }
+  }
+  
+@keyframes fa-github-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+  @media (prefers-reduced-motion: no-preference) {
+    .fa-envelope:hover{
+      animation: fa-envelope-spin infinite 5s linear;
+    }
+  }
+  
+@keyframes fa-envelope-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  .name {
+      color: rgb(245, 222, 179, 0.3);
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  .f > a {
+    color: white;
+  
+  }
