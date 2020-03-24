@@ -38,14 +38,17 @@ body {
 .input::placeholder{
     color: black;
 }
-input::placeholder {
-    color: black
-}
 
 .button {
+    outline-style: none;
    background-color: black;
    color: white;
 }
+
+.button:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+} 
 
 .table-country-pollution {
     color: rgb(255, 255, 255, 0.9);

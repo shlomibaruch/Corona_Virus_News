@@ -81,6 +81,8 @@ export class GlobalCoronaPollution extends Component {
         });
 
 
+       
+
         return (
             this.state.loading ? <Carusel /> :
                 <div className="global-corona-pollution">
@@ -110,11 +112,19 @@ export class GlobalCoronaPollution extends Component {
                         <form className="form-Search" action="/action_page.php">
                             <input className="input" onChange={(e) => { this.setState({ searchInput: e.target.value }) }} type="text" placeholder="Search Country.." name="search" />
                             <button className="button" onClick={(e) => {
+                                if(this.state.searchInput == "" || !isNaN(this.state.searchInput ) ){
+                                   e.preventDefault()
+                                   return alert("put value");
+                                    
+                                }
                                 e.preventDefault()
                                 this.search(this.state.searchInput)
                                 this.History(this.state.searchInput)
-                                this.setState({ flag: !false })
+                                this.setState({flag: !false })
                                 this.setState({isSearch: true})
+                                
+                               
+                                
                             }} type="submit"><i className="fa fa-search"></i></button>
 
                         </form>

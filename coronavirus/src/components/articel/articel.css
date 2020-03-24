@@ -37,14 +37,35 @@
     color: blanchedalmond;
 }
 .searchInput{
+ 
     display: inline;
    
+   
+}
+
+input {
+    margin-top: 10px;
+    margin-left: 45px;
+    color: white;
+    background-color: rgba(2, 17, 4, 0.3);
+    width: 300px;
+ 
+}
+
+.input::placeholder{
+    color: black;
 }
 
 .button {
     border-radius: 10px;
     border: none;
 }
+
+.button:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+} 
+
 #cardHover{
     background-color: black;
     height: 100px;

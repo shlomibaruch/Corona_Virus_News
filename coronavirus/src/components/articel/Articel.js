@@ -55,7 +55,7 @@ export default class Articel extends Component {
         return (
             <div>
                 <div className='searchInput'>
-                    <input type="text" onChange={(e) => {this.setState({inputsearch: e.target.value}) }} />
+                    <input type="text" onChange={(e) => {this.setState({inputsearch: e.target.value}) }} placeholder="Search Articel..."/>
                
                          <button className="button" onClick={(e) => {
                                  this.setState({loading: false}) ;

@@ -20,7 +20,7 @@ export default function Footer() {
             <div className="mb-5 flex-center">
              
               <div className="flex1 f"> 
-              <p className="name">kobi bitaolin</p>
+              <p className="name">Kobi Bitaolin</p><br/>
                 <a className="gplus-ic"  href="https://github.com/kobi-bitaolin"  target="_blank">
                   <i className="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
                 </a>
@@ -37,7 +37,7 @@ export default function Footer() {
 
 
               <div className="flex2 f">
-              <p className="name">shlomi baruch</p>
+              <p className="name">Shlomi Baruch</p><br/>
                 <a  className="gplus-ic"  href="https://github.com/shlomibaruch"  target="_blank">
                   <i className="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"></i>
                 </a>
