@@ -104,6 +104,7 @@ justify-content: flex-start;
 
 
   .name {
+      box-shadow: 10px 10px 10px #ffffff;
       color: rgb(245, 222, 179, 0.3);
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
