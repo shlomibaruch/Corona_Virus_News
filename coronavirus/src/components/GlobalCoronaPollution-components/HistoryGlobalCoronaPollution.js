@@ -1,9 +1,9 @@
 import React from 'react'
-import './GlobalCoronaPollution.css'
+import './GlobalCoronaPollution.css';
+import Carusel from '../carusel/carusel'
 export default function HistoryGlobalCoronaPollution(props) {
 
     let results = [];
-
     for (let i = 0; i < props.searchData.length - 1; i++) {
         if (props.searchData[i + 1].total_cases !== props.searchData[i].total_cases) {
 
@@ -26,10 +26,7 @@ export default function HistoryGlobalCoronaPollution(props) {
             <td>{record.record_date}</td>
         </tr>
     });
-
-
-    return (
-        <div className= { props.flag ? 'HistoryContainer' : 'HistoryContainerNone' }>
+    return ( <div className= { props.flag ? 'HistoryContainer' : 'HistoryContainerNone' }>
             <div className='HistoryHeader' >
 
             <h1 >History Record</h1>
@@ -49,11 +46,12 @@ export default function HistoryGlobalCoronaPollution(props) {
                 
                 <tbody>
                     {showHistoryRecord}
+                   
                 </tbody>
 
             </table>
 
-        </div>
+        </div> 
     )
 }
 

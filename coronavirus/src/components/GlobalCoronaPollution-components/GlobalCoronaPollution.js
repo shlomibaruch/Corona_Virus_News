@@ -110,11 +110,17 @@ export class GlobalCoronaPollution extends Component {
                         <form className="form-Search" action="/action_page.php">
                             <input className="input" onChange={(e) => { this.setState({ searchInput: e.target.value }) }} type="text" placeholder="Search Country.." name="search" />
                             <button className="button" onClick={(e) => {
-                                e.preventDefault()
-                                this.search(this.state.searchInput)
-                                this.History(this.state.searchInput)
-                                this.setState({ flag: !false })
-                                this.setState({isSearch: true})
+                                if(this.state.searchInput === ""){
+                                    e.preventDefault()
+                                
+                                }else{
+                                    e.preventDefault()
+                                    this.search(this.state.searchInput)
+                                    this.History(this.state.searchInput)
+                                    this.setState({ flag: !false })
+                                    this.setState({isSearch: true})
+                                }
+                            
                             }} type="submit"><i className="fa fa-search"></i></button>
 
                         </form>
