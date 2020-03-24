@@ -9,3 +9,25 @@
     text-align: center;
 }
 
+.fab , .far {
+    cursor: pointer;
+}
+/* #closeMail:hover{
+    display: none;
+    
+} */
+
+/* #openMail{
+    display: inline;
+} */
+#closeMail{
+    font-size:5em;
+    color:grey;
+    cursor:pointer;
+  }
+   
+  #closeMail:hover .fa-envelope:before{
+    content:"<i class='far fa-envelope-open fa-lg white-text mr-md-5 mr-3 fa-2x'></i>";
+    color:green;
+    opacity:0.4;
+  }

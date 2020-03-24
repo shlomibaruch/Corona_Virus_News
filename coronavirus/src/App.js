@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Articel from './components/articel/Articel'
+import Articel from './components/articel/Articel';
 import GlobalCoronaPollution from './components/GlobalCoronaPollution-components/GlobalCoronaPollution';
-import Home from './components/home/Home'
+import Home from './components/home/Home';
 import Footer from './components/Footer-component/Footer';
+import Solution from './components/solution/Solution'
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import axios from 'axios';
-import Nav from './components/Nav/Nav'
+import Nav from './components/Nav/Nav';
 
 
 class App extends Component {
@@ -38,6 +39,7 @@ class App extends Component {
           />} />
           <Route exact path='/articel' render={() => <Articel artical={this.articelData} articals={this.state.articel} />} />
           <Route exact path='/globalCoronaPollution' render={() => <GlobalCoronaPollution />} />
+          <Route exact path='/solution' component={Solution} />
         </Switch >
         <Footer className="footer" />
       </BrowserRouter>
