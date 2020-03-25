@@ -27,22 +27,22 @@ export default class Home extends Component {
                     <div class="col-sm-4 " >
                         <div className=' text'>
                             <h4 >Total Cases</h4>
-                            <p>
-                                {this.props.articalTotalCases.total_cases}</p>
+                            
+                              <p className="total-numbers">  {this.props.articalTotalCases.total_cases}</p>
                         </div>
                     </div>
 
                     <div class="col-sm-4 a" >
                         <div className=' text'>
                             <h4 >Total Recovered</h4>
-                            <p style={{ 'color': 'green' }}>
+                            <p className="total-numbers" style={{ 'color': 'rgb(0, 128, 0,0.6)' }}>
                                 {this.props.articalTotalCases.total_recovered}</p>
                         </div>
                     </div>
                     <div class="col-sm-4" >
                         <div className=' text'>
                             <h4 >Total Deaths</h4>
-                            <p>{this.props.articalTotalCases.total_deaths}</p>
+                            <p className="total-numbers">{this.props.articalTotalCases.total_deaths}</p>
                         </div>
                     </div>
                 </div>

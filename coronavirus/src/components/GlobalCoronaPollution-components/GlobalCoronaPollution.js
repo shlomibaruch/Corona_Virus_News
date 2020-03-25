@@ -62,6 +62,7 @@ export class GlobalCoronaPollution extends Component {
   
 
     render() {
+console.log(this.state.historyArr);
 
 
         const elements = this.state.countryArr.map((element, index) => {
@@ -78,6 +79,17 @@ export class GlobalCoronaPollution extends Component {
 
 
         });
+
+      const cheackArrLengthBeforSearch = ()=> {
+
+            if(this.state.historyArr.length === 0){
+                return false;
+                
+            }else if(this.state.historyArr.length > 0){
+                return true;
+                
+            }
+        }
 
 
 

@@ -33,6 +33,7 @@ body {
   color: white;
   background-color: rgba(2, 17, 4, 0.3);
   width: 300px;
+  outline-style: none;
 
 }
 .input::placeholder{
@@ -40,7 +41,7 @@ body {
 }
 
 .button {
-    outline-style: none;
+   outline-style: none;
    background-color: black;
    color: white;
 }
@@ -69,8 +70,8 @@ body {
 
 .table-global-pollution-head-numbers{
     
-
-    color: rgb(231, 8, 8);
+    font-weight: bold;
+    color: rgb(255,0,0);
 }
 
 .table-country-pollution-numbers {
@@ -120,4 +121,7 @@ display: none;
     background-color: rgba(255, 235, 205, 0.459);
     border-bottom: 5px solid black;
     border-top: 5px solid black;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0);
+    
 }
+
