@@ -56,7 +56,7 @@ justify-content: flex-start;
 
   @media (prefers-reduced-motion: no-preference) {
     .fa-linkedin-in:hover {
-      animation: fa-linkedin-in-spin infinite 5s linear;
+      animation: fa-linkedin-in-spin infinite 3s linear;
     }
   }
   
@@ -72,7 +72,7 @@ justify-content: flex-start;
 
   @media (prefers-reduced-motion: no-preference) {
     .fa-github:hover{
-      animation: fa-github-spin infinite 5s linear;
+      animation: fa-github-spin infinite 3s linear;
     }
   }
   
@@ -89,7 +89,7 @@ justify-content: flex-start;
 
   @media (prefers-reduced-motion: no-preference) {
     .fa-envelope:hover{
-      animation: fa-envelope-spin infinite 5s linear;
+      animation: fa-envelope-spin infinite 3s linear;
     }
   }
   
@@ -100,6 +100,9 @@ justify-content: flex-start;
     to {
       transform: rotate(360deg);
     }
+    
+
+    
   }
 
 

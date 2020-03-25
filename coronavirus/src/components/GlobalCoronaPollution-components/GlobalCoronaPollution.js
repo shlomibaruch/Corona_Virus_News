@@ -59,8 +59,26 @@ export class GlobalCoronaPollution extends Component {
 
     }
 
+    ifExsiet =(input)=> {
+
+        for(let i =0; i < this.state.countryArr.length; i++) {
+
+            if(input !== this.state.countryArr[i].country_name) {
+
+                return console.log(true);
+                
+                
+            } 
+        }
+    }
+
+    
+
+  
+
 
     render() {
+console.log(this.state.historyArr);
 
 
 
@@ -79,6 +97,17 @@ export class GlobalCoronaPollution extends Component {
 
 
         });
+
+      const cheackArrLengthBeforSearch = ()=> {
+
+            if(this.state.historyArr.length === 0){
+                return false;
+                
+            }else if(this.state.historyArr.length > 0){
+                return true;
+                
+            }
+        }
 
 
        
@@ -112,18 +141,26 @@ export class GlobalCoronaPollution extends Component {
                         <form className="form-Search" action="/action_page.php">
                             <input className="input" onChange={(e) => { this.setState({ searchInput: e.target.value }) }} type="text" placeholder="Search Country.." name="search" />
                             <button className="button" onClick={(e) => {
-                                if(this.state.searchInput == "" || !isNaN(this.state.searchInput ) ){
+
+                                
+                                if(this.state.searchInput == "" || !isNaN(this.state.searchInput )){
                                    e.preventDefault()
                                    return alert("put value");
-                                    
+                                     
+                                }else if( cheackArrLengthBeforSearch() ){
+
+                                    return alert("no cunotry")
+                                }else{
+                                    e.preventDefault()
+                                    this.search(this.state.searchInput)
+                                    this.History(this.state.searchInput)
+                                    this.setState({flag: !false })
+                                    this.setState({isSearch: true})
+                                    this.ifExsiet(this.state.searchInput)
+
                                 }
-                                e.preventDefault()
-                                this.search(this.state.searchInput)
-                                this.History(this.state.searchInput)
-                                this.setState({flag: !false })
-                                this.setState({isSearch: true})
+                              
                                 
-                               
                                 
                             }} type="submit"><i className="fa fa-search"></i></button>
 

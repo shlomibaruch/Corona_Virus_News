@@ -29,11 +29,14 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 600px;
+    min-height: 600px;
 }
+
+
 .CardarticelContainer > span {
     font-size: 15px;
 }
+
 .title{
     position: relative;
     color: blanchedalmond;
@@ -48,7 +51,7 @@
 
 input {
     margin-top: 10px;
-    margin-left: 45px;
+    margin-left: 30px;
     color: white;
     background-color: rgba(2, 17, 4, 0.3);
     width: 300px;

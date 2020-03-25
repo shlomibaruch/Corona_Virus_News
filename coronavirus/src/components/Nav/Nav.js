@@ -7,7 +7,7 @@ export default function Nav () {
 
     return (
 
-        <div>
+        <div className="home-page">
             <nav  class="nav navbar navbar-expand-lg navbar-light ">
                 <img style={{"width":"5%","borderRadius": '10px'}} src='https://cdn.pixabay.com/photo/2020/03/08/23/24/coronavirus-4914028__340.jpg'/>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
