@@ -26,7 +26,7 @@ export class GlobalCoronaPollution extends Component {
     componentDidMount() {
         axios.get('https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php?country=&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588')
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 this.setState({
                     total_cases: res.data.total_cases,
                     total_deaths: res.data.total_deaths,
@@ -43,26 +43,25 @@ export class GlobalCoronaPollution extends Component {
     search = (input) => {
         axios.get(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=${input}&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588`)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 this.setState({
                     countryArr: res.data.latest_stat_by_country
                 });
 
             });
-    }
+    };
+
     History = (input) => {
         axios.get(`https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_particular_country.php?country=${input}&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588`)
             .then(res => {
-                console.log(res.data);
+                // console.log(res.data);
                 this.setState({ historyArr: res.data.stat_by_country })
             })
 
     }
-
+  
 
     render() {
-
-
 
 
         const elements = this.state.countryArr.map((element, index) => {
@@ -81,7 +80,7 @@ export class GlobalCoronaPollution extends Component {
         });
 
 
-       
+
 
         return (
             this.state.loading ? <Carusel /> :
@@ -112,26 +111,30 @@ export class GlobalCoronaPollution extends Component {
                         <form className="form-Search" action="/action_page.php">
                             <input className="input" onChange={(e) => { this.setState({ searchInput: e.target.value }) }} type="text" placeholder="Search Country.." name="search" />
                             <button className="button" onClick={(e) => {
-                                if(this.state.searchInput == "" || !isNaN(this.state.searchInput ) ){
-                                   e.preventDefault()
-                                   return alert("put value");
-                                    
+                                console.log(this.find('israel'));
+
+
+                                if (this.state.searchInput == "" || !isNaN(this.state.searchInput)) {
+                                    e.preventDefault()
+                                    return alert("put value");
+
                                 }
+                                this.find('israel')
                                 e.preventDefault()
                                 this.search(this.state.searchInput)
                                 this.History(this.state.searchInput)
-                                this.setState({flag: !false })
-                                this.setState({isSearch: true})
-                                
-                               
-                                
+                                this.setState({ flag: !false })
+                                this.setState({ isSearch: true })
+
+
+
                             }} type="submit"><i className="fa fa-search"></i></button>
 
                         </form>
 
                         <div >
 
-                            <table className={this.state.isSearch? 'table-country-pollution' : 'table-country-pollutionNone'}>
+                            <table className={this.state.isSearch ? 'table-country-pollution' : 'table-country-pollutionNone'}>
                                 <thead>
 
                                     <tr >

@@ -21,7 +21,7 @@ class App extends Component {
     this.setState({ artical: data })
   }
   render() {
-    console.log('artical from app', this.state.articel);
+    // console.log('artical from app', this.state.articel);
 
     return (
 

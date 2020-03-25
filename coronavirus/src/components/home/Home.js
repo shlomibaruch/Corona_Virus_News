@@ -7,6 +7,7 @@ export default class Home extends Component {
 
     render() {
         let NEWS = this.props.articalIsraelNews.map((news, i) => {
+            console.log(news);
 
             return <div class="carousel-item" id='carousel-item'>
                 <div className='carouselContainer'>
@@ -14,7 +15,7 @@ export default class Home extends Component {
                     <img class="d-block " src={news.urlToImage} alt="First slide" />
 
                     <h3 style={{ 'textAlign': 'center' }}>{news.title}</h3>
-
+                    <h6 style={{ 'textAlign': 'right' }}>{news.description}</h6>
                 </div>
             </div>
 
@@ -46,15 +47,24 @@ export default class Home extends Component {
                     </div>
                 </div>
             </div>
-            {/* <Solution /> */}
-            <div className='newsContainer'>
 
+            <div className='newsContainer'>
+                <div className='newsTitle'>
+                    <h1>What's The News</h1>
+                </div>
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <span class="carousel-item active carouselContainer"></span>
-                        {NEWS} 
+                        {NEWS}
                     </div>
                 </div>
+            </div>
+            
+                <div id='stayHomeDiv'></div>
+
+            <div className='solutionContainer'>
+
+                <Solution />
             </div>
 
         </div>

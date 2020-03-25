@@ -1,9 +1,6 @@
 import React from 'react'
 import './GlobalCoronaPollution.css'
 
-
-
-
 export default function HistoryGlobalCoronaPollution(props) {
 
     let results = [];

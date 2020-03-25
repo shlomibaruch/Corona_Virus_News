@@ -1,5 +1,8 @@
 .solutionContainer{
   min-height: 700px;
+  width: 95%;
+  position: relative;
+  left: 2.5%;
 }
 .solutionColumn{
   position: relative;
@@ -36,7 +39,7 @@
   /* height: 50px; */
 /* } */ 
 
-.solutionColumn:hover .sb {
+.solutionColumn:hover .HoverSolutionContainer {
   opacity: 1;
  display: flex;
  width: inherit;
@@ -44,7 +47,7 @@
 }
 
 
-.sb {
+.HoverSolutionContainer {
 display: none;
 width: inherit;
 height: 70%;

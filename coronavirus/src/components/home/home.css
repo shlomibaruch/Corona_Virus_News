@@ -33,19 +33,59 @@
 }
 .newsContainer{
   margin-top: 8%;
-  background-color: rgba(0, 0, 0, 0.445);
-  height: 500px;
+  /* background-color: rgba(0, 0, 0, 0.445);
+  height: 550px;
+   */
 
 }
 .carouselContainer{
   color: white;
-  width: 70%;
-  height: 550px;
+  width: 90%;
+  height: 580px;
   display: flex;
   flex-direction: column;
   position: relative;
-  left: 15%;
+  left: 5%;
+  background-color: rgba(0, 0, 0, 0.692);
+  border: 3px solid black;
+  border-radius: 10px;
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.384);
+
 }
 .carouselContainer > img {
+  background: blanchedalmond;
+  border: 3px solid rgba(0, 0, 0, 0.692);
+  padding: 10px;
   height: 450px;
+  border-bottom-left-radius: 70px;
+  border-top-right-radius: 70px;
+  box-shadow: 20px 20px 20px rgba(54, 25, 25, 0.425);
+
+}
+.newsTitle{
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.836);
+  position: relative;
+  top: 30px;
+  width: 72%;
+  left: 13%;
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.562);
+}
+.solutionContainer{
+  margin-top: 5%;
+}
+#stayHomeDiv{
+  background-image: url('https://cdn.pixabay.com/photo/2020/03/22/10/48/stay-at-home-4956680_1280.jpg'),linear-gradient(rgba(255, 255, 255, 0.4),rgba(255, 255, 255, 0.6),rgba(112, 112, 112, 0.9));
+  background-attachment: local;
+  margin-top: 10%;
+  /* background-image: linear-gradient(red,blue,yellow); */
+  height: 530px;
+  background-size: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+ 
 }
