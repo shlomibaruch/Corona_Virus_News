@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 import './articel.css';
-import Carusel from '../carusel/carusel';
 
 export default class Articel extends Component {
 
@@ -13,8 +12,10 @@ export default class Articel extends Component {
     // search function : get the value from the search input and Sending the request from the beginning ;
 
     serach = (inputsearch) => {
-        axios.get(`http://newsapi.org/v2/everything?q=${inputsearch}&from=2020-03-20&to=2020-03-20&sortBy=popularity&apiKey=17d57b58c3df4dd48364cbc30503849b`)
-            .then(res => {  this.setState( { articel: res.data.articles } ) });
+        axios.get(`https://newsapi.org/v2/everything?q=${inputsearch}&from=2020-03-20&to=2020-03-20&sortBy=popularity&apiKey=17d57b58c3df4dd48364cbc30503849b`)
+            .then(res => {  this.setState( { articel: res.data.articles } ) 
+            console.log(res.data.articles);
+        });
     };
 
 

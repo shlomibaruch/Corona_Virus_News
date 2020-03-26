@@ -40,9 +40,9 @@ export default function Solution() {
                         </div>
 
                     </div>
-                    <div class="col solutionColumn" id=''>
+                    <div class="col solutionColumn" id='sneeze-to-the-elbow'>
                         <div class="HoverSolutionContainer">
-                            <h3>Clean your hands often</h3>
+                            <h3></h3>
 
                             <button><a href='https://www.clalit.co.il/he/your_health/family/PublishingImages/Pages/covid19_prevention/hands2.jpg' target='_blank'>click</a> </button>
                         </div>

@@ -5,7 +5,7 @@ import GlobalCoronaPollution from './components/GlobalCoronaPollution-components
 import Home from './components/home/Home';
 import Footer from './components/Footer-component/Footer';
 import Solution from './components/solution/Solution'
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 import Nav from './components/Nav/Nav';
 
@@ -17,9 +17,7 @@ class App extends Component {
     homeArticles: []
   }
 
-  articelData = (data) => {
-    this.setState({ artical: data })
-  }
+ 
   render() {
     // console.log('artical from app', this.state.articel);
 
@@ -37,7 +35,7 @@ class App extends Component {
             articalTotalCases={this.state.worldCases}
             articalIsraelNews={this.state.homeArticles.slice(0, 10)}
           />} />
-          <Route exact path='/articel' render={() => <Articel artical={this.articelData} articals={this.state.articel} />} />
+          <Route exact path='/articel' render={() => <Articel articals={this.state.articel} />} />
           <Route exact path='/globalCoronaPollution' render={() => <GlobalCoronaPollution />} />
           <Route exact path='/solution' component={Solution} />
         </Switch >
@@ -54,7 +52,7 @@ class App extends Component {
           worldCases: res.data
         });
       });
-    axios.get('http://newsapi.org/v2/everything?q=coronavirus&from=2020-03-20&to=2020-03-20&sortBy=popularity&apiKey=17d57b58c3df4dd48364cbc30503849b')
+    axios.get('https://newsapi.org/v2/everything?q=coronavirus&from=2020-03-20&to=2020-03-20&sortBy=popularity&apiKey=17d57b58c3df4dd48364cbc30503849b')
       .then(res => {
         // console.log(res.data.articles);
         this.setState({
@@ -62,7 +60,7 @@ class App extends Component {
         })
 
       });
-    axios.get('http://newsapi.org/v2/top-headlines?sources=google-news-is&apiKey=17d57b58c3df4dd48364cbc30503849b')
+    axios.get('https://newsapi.org/v2/top-headlines?sources=google-news-is&apiKey=17d57b58c3df4dd48364cbc30503849b')
       .then(res => {
         this.setState({
           homeArticles: res.data.articles

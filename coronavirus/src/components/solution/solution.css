@@ -6,8 +6,8 @@
 }
 .solutionColumn{
   position: relative;
-  background-color: khaki;
-  border: 1px black solid;
+  /* background-color: khaki; */
+  border: 1px rgba(0, 0, 0, 0.3) solid;
   height: 350px;
   display: flex;
   justify-content: center;
@@ -16,10 +16,13 @@
   padding: 0;
   margin: 5px;
   /* padding: 5px; */
+  /* box-shadow: 8px 8px 8px 8px rgb(255, 255, 255); */
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   border-style: groove;
 }
+
+
 /* .one > p{
   color: white;
   display: none;
@@ -40,7 +43,7 @@
 /* } */ 
 
 .solutionColumn:hover .HoverSolutionContainer {
-  opacity: 1;
+ opacity: 1;
  display: flex;
  width: inherit;
 
@@ -48,15 +51,15 @@
 
 
 .HoverSolutionContainer {
-display: none;
-width: inherit;
-height: 70%;
+ display: none;
+ width: inherit;
+ height: 100%;
  background-color: rgba(0, 0, 0, 0.562);
  justify-content: start;
  align-items: center;
  flex-direction: column;
- border-bottom-left-radius: 25px;
- border-top-right-radius: 25px;
+ border-bottom-left-radius: inherit;
+ border-top-right-radius: inherit;
 }
 #washHands{
   background-image: url('https://cdn.pixabay.com/photo/2020/03/15/18/36/hands-4934590__340.jpg');
@@ -78,6 +81,13 @@ height: 70%;
 }
 #MaintainHygiene{
   background-image: url('https://cdn.pixabay.com/photo/2020/03/09/07/15/disinfection-of-hands-4914856__340.jpg');
+  background-repeat: no-repeat;
+  background-position: center ;
+  background-size: cover;
+}
+
+#sneeze-to-the-elbow {
+  background-image: url('https://cdn.pixabay.com/photo/2018/10/04/13/06/man-3723548_960_720.jpg');
   background-repeat: no-repeat;
   background-position: center ;
   background-size: cover;

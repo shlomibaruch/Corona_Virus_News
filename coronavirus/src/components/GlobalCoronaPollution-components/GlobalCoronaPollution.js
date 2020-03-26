@@ -119,7 +119,7 @@ console.log(this.state.historyArr);
 
                                 if (this.state.searchInput == "" || !isNaN(this.state.searchInput)) {
                                     e.preventDefault()
-                                    return alert("put value");
+                                    return alert("Enter Country Name!");
 
                                 }
                                
@@ -135,12 +135,12 @@ console.log(this.state.historyArr);
 
                         </form>
 
-                        <div >
+                        <div  className="table-country-pollution-div">
 
                             <table className={this.state.isSearch ? 'table-country-pollution' : 'table-country-pollutionNone'}>
                                 <thead>
 
-                                    <tr >
+                                    <tr>
                                         <th>Country Name</th>
                                         <th>Total Cases</th>
                                         <th>Total Deaths</th>
