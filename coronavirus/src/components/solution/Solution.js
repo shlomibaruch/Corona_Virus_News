@@ -22,9 +22,9 @@ export default function Solution() {
                         </div>
 
                     </div>
-                    <div class="col solutionColumn" id=''>
+                    <div class="col solutionColumn" id='AvoidNoseContact'>
                         <div class="HoverSolutionContainer">
-                            <h3>Clean your hands often</h3>
+                            <h3>Avoid contact with nose, mouth and eyes</h3>
 
                             <button><a href='https://www.clalit.co.il/he/your_health/family/PublishingImages/Pages/covid19_prevention/hands2.jpg' target='_blank'>click</a> </button>
                         </div>
@@ -32,9 +32,9 @@ export default function Solution() {
                     </div>
 
                     <div class="w-100"></div>
-                    <div class="col solutionColumn" id=''>
+                    <div class="col solutionColumn" id='MaintainHygiene'>
                         <div class="HoverSolutionContainer">
-                            <h3>Clean your hands often</h3>
+                            <h3>Maintain Hygiene</h3>
 
                             <button><a href='https://www.clalit.co.il/he/your_health/family/PublishingImages/Pages/covid19_prevention/hands2.jpg' target='_blank'>click</a> </button>
                         </div>
