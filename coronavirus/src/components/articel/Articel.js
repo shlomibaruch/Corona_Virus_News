@@ -13,13 +13,18 @@ export default class Articel extends Component {
     // search function : get the value from the search input and Sending the request from the beginning ;
 
     serach = (inputsearch) => {
-        axios.get(`http://newsapi.org/v2/everything?q=${inputsearch}&from=2020-03-20&to=2020-03-20&sortBy=popularity&apiKey=17d57b58c3df4dd48364cbc30503849b`)
+        axios.get(`https://newsapi.org/v2/everything?q=${inputsearch}&from=2020-02-26&sortBy=publishedAt&apiKey=17d57b58c3df4dd48364cbc30503849b`)
             .then(res => {  this.setState( { articel: res.data.articles } ) });
     };
 
 
     render() {
 
+    //    const serach = (inputsearch) => {
+    //         axios.get(`https://newsapi.org/v2/everything?q=${inputsearch}&from=2020-02-26&sortBy=publishedAt&apiKey=17d57b58c3df4dd48364cbc30503849b`)
+    //             .then(res => {  this.setState( { articel: res.data.articles } ) });
+    //     };
+    
         let NEWS = this.props.articals.map((item, index) => {
 
             return <div key={index} className='CardarticelContainer '>
@@ -58,12 +63,15 @@ export default class Articel extends Component {
                     <input type="text" onChange={(e) => {this.setState({inputsearch: e.target.value}) }} placeholder="Search Articel..."/>
                
                          <button className="button" onClick={(e) => {
+
                              if(this.state.searchInput === "" || !isNaN(this.state.searchInput)){
                                 e.preventDefault()
                             
-                            }
+                            }else{
                                  this.setState({loading: false}) ;
                                  this.serach(this.state.inputsearch);
+                            }
+                                
                             }} type="submit"><i className="fa fa-search"></i></button>
                 </div>
 

@@ -135,7 +135,7 @@ console.log(this.state.historyArr);
 
                         </form>
 
-                        <div >
+                        <div className="a">
 
                             <table className={this.state.isSearch ? 'table-country-pollution' : 'table-country-pollutionNone'}>
                                 <thead>
