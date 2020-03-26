@@ -80,16 +80,7 @@ console.log(this.state.historyArr);
 
         });
 
-      const cheackArrLengthBeforSearch = ()=> {
-
-            if(this.state.historyArr.length === 0){
-                return false;
-                
-            }else if(this.state.historyArr.length > 0){
-                return true;
-                
-            }
-        }
+    
 
 
 
@@ -123,7 +114,7 @@ console.log(this.state.historyArr);
                         <form className="form-Search" action="/action_page.php">
                             <input className="input" onChange={(e) => { this.setState({ searchInput: e.target.value }) }} type="text" placeholder="Search Country.." name="search" />
                             <button className="button" onClick={(e) => {
-                                console.log(this.find('israel'));
+                               
 
 
                                 if (this.state.searchInput == "" || !isNaN(this.state.searchInput)) {
@@ -131,7 +122,7 @@ console.log(this.state.historyArr);
                                     return alert("put value");
 
                                 }
-                                this.find('israel')
+                               
                                 e.preventDefault()
                                 this.search(this.state.searchInput)
                                 this.History(this.state.searchInput)

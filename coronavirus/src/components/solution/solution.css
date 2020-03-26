@@ -7,7 +7,8 @@
 .solutionColumn{
   position: relative;
   background-color: khaki;
-  border: 1px black solid;
+  box-shadow: 10px 10px 10px #ffffff;
+  border: 1px rgb(0, 0, 0, 0.3) solid;
   height: 300px;
   display: flex;
   justify-content: center;
