@@ -4,47 +4,64 @@ export default function Solution() {
     return (
         <div className='solutionContainer'>
             <div id="container">
-                <div className="row ">
+                <div className="row f">
                     <div className="col solutionColumn " id='washHands'>
+                    <h3 className='txtNone'>Clean your hands often</h3>
+
                         <div className="HoverSolutionContainer">
-                            <div>
-                                <h3>Clean your hands often</h3>
-                                <button><a href='https://www.clalit.co.il/he/your_health/family/PublishingImages/Pages/covid19_prevention/hands2.jpg' target='_blank'>click</a> </button>
-                            </div>
+                                <ul className='ulExplanation'>
+                                    <li>ea modi, optio obcaecati aperiam inventore. Placeat sit dolorum impedit beatae numquam! Nobis, placeat.</li>
+                                    <li> Placeat totam aut consequuntur, accusantium molestiae, accusamus nemo</li>
+                                    <li>Placeat totam aut consequuntur, accusantium molestiae, accusamus nemo</li>
+                                </ul>
+                            
+
                         </div>
                     </div>
 
                     <div className="col solutionColumn" id='towMeter'>
+                            <h3 className='txtNone'>Keep 2 feet from each other</h3>
                         <div className="HoverSolutionContainer">
-                            <h3>Keep 2 feet from each other</h3>
-
-                            <button><a href='https://www.clalit.co.il/he/your_health/family/PublishingImages/Pages/covid19_prevention/hands2.jpg' target='_blank'>click</a> </button>
+                        <ul className='ulExplanation'>
+                                    <li>ea modi, optio obcaecati aperiam inventore. Placeat sit dolorum impedit beatae numquam! Nobis, placeat.</li>
+                                    <li> Placeat totam aut consequuntur, accusantium molestiae, accusamus nemo</li>
+                                    <li>Placeat totam aut consequuntur, accusantium molestiae, accusamus nemo</li>
+                                </ul>
                         </div>
 
                     </div>
                     <div className="col solutionColumn" id='AvoidNoseContact'>
+                            <h3 className='txtNone'>Avoid contact with nose, mouth and eyes</h3>
                         <div className="HoverSolutionContainer">
-                            <h3>Avoid contact with nose, mouth and eyes</h3>
-
-                            <button><a href='https://www.clalit.co.il/he/your_health/family/PublishingImages/Pages/covid19_prevention/hands2.jpg' target='_blank'>click</a> </button>
+                        <ul className='ulExplanation'>
+                                    <li>ea modi, optio obcaecati aperiam inventore. Placeat sit dolorum impedit beatae numquam! Nobis, placeat.</li>
+                                    <li> Placeat totam aut consequuntur, accusantium molestiae, accusamus nemo</li>
+                                    <li>Placeat totam aut consequuntur, accusantium molestiae, accusamus nemo</li>
+                                </ul>
                         </div>
 
                     </div>
 
                     <div className="w-100"></div>
                     <div className="col solutionColumn" id='MaintainHygiene'>
+                            <h3 className='txtNone'>Maintain Hygiene</h3>
                         <div className="HoverSolutionContainer">
-                            <h3>Maintain Hygiene</h3>
-
-                            <button><a href='https://www.clalit.co.il/he/your_health/family/PublishingImages/Pages/covid19_prevention/hands2.jpg' target='_blank'>click</a> </button>
+                        <ul className='ulExplanation'>
+                                    <li>ea modi, optio obcaecati aperiam inventore. Placeat sit dolorum impedit beatae numquam! Nobis, placeat.</li>
+                                    <li> Placeat totam aut consequuntur, accusantium molestiae, accusamus nemo</li>
+                                    <li>Placeat totam aut consequuntur, accusantium molestiae, accusamus nemo</li>
+                                </ul>
                         </div>
 
                     </div>
-                    <div class="col solutionColumn" id='sneeze-to-the-elbow'>
-                        <div class="HoverSolutionContainer">
-                            <h3></h3>
-
-                            <button><a href='https://www.clalit.co.il/he/your_health/family/PublishingImages/Pages/covid19_prevention/hands2.jpg' target='_blank'>click</a> </button>
+                    <div className="col solutionColumn" id='sneeze-to-the-elbow'>
+                            <h3 className='txtNone'>Taking care of yourself is also saving of the people close to you.</h3>
+                        <div className="HoverSolutionContainer">
+                        <ul className='ulExplanation'>
+                                    <li>ea modi, optio obcaecati aperiam inventore. Placeat sit dolorum impedit beatae numquam! Nobis, placeat.</li>
+                                    <li> Placeat totam aut consequuntur, accusantium molestiae, accusamus nemo</li>
+                                    <li>Placeat totam aut consequuntur, accusantium molestiae, accusamus nemo</li>
+                                </ul>
                         </div>
 
                     </div>

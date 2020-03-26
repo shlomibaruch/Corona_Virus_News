@@ -1,12 +1,11 @@
 .solutionContainer{
-  min-height: 700px;
+  min-height: 500px;
   width: 95%;
   position: relative;
   left: 2.5%;
 }
 .solutionColumn{
   position: relative;
-  /* background-color: khaki; */
   border: 1px rgba(0, 0, 0, 0.3) solid;
   height: 350px;
   display: flex;
@@ -15,40 +14,43 @@
   flex-direction: column;
   padding: 0;
   margin: 5px;
-  /* padding: 5px; */
-  /* box-shadow: 8px 8px 8px 8px rgb(255, 255, 255); */
   border-bottom-left-radius: 15px;
   border-top-right-radius: 15px;
   border-style: groove;
 }
 
-
-/* .one > p{
-  color: white;
-  display: none;
-} */
-/* .one:hover{
-  background-color: rgba(0, 0, 0, 0.534);
-} */
-
-
-/* .b {
-  position: relative;
-  transition: .5s ease;
-  opacity: 0; 
-  transform: translate(-50%, -50%);
-  text-align: center;
-  /* background-color: black; */
-  /* height: 50px; */
-/* } */ 
-
 .solutionColumn:hover .HoverSolutionContainer {
  opacity: 1;
  display: flex;
  width: inherit;
+ color: white;
 
 }
-
+.solutionColumn:hover .txtNone{
+  display: none;
+}
+@media screen and (max-width: 1100px) {
+  .f{
+    display: flex;
+  justify-content: center;
+    flex-direction: column;
+  }
+  .solutionColumn{
+    height: 350px;
+  }
+  .HoverSolutionContainer > h3 { 
+    color: wheat;
+    font-size: 15px;
+  }
+  .ulExplanation{
+    position: relative;
+    margin: 3%;
+    font-size: 20px;
+  }
+  .ulExplanation > li {
+    margin-top: 20px;
+  }
+}
 
 .HoverSolutionContainer {
  display: none;
@@ -92,6 +94,7 @@
   background-position: center ;
   background-size: cover;
 }
-.HoverSolutionContainer > h3 { 
-  color: wheat;
+.ulExplanation{
+  position: relative;
+  margin: 3%;
 }

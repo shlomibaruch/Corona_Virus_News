@@ -1,9 +1,12 @@
+.HomeContainer{
+  min-height: 600px;
+}
 
 .text{
     position: relative;
     top: 50px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 200px;
@@ -90,4 +93,15 @@
   border-top: 2px solid black;
   border-bottom: 2px solid black;
  
+}
+
+@media screen and (max-width:770px){
+  .text{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 7%;
+    margin-bottom: 10%;
+ }
 }

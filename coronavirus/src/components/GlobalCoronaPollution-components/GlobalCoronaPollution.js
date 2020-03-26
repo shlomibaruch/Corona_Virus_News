@@ -62,7 +62,6 @@ export class GlobalCoronaPollution extends Component {
   
 
     render() {
-console.log(this.state.historyArr);
 
 
         const elements = this.state.countryArr.map((element, index) => {
@@ -86,7 +85,7 @@ console.log(this.state.historyArr);
 
 
         return (
-            this.state.loading ? <Carusel /> :
+            this.state.loading ? <div className="caruselD"><Carusel /></div> :
                 <div className="global-corona-pollution">
 
                     <table className="table-global-pollution" >
@@ -117,7 +116,7 @@ console.log(this.state.historyArr);
                                
 
 
-                                if (this.state.searchInput == "" || !isNaN(this.state.searchInput)) {
+                                if (this.state.searchInput === "" || !isNaN(this.state.searchInput)) {
                                     e.preventDefault()
                                     return alert("Enter Country Name!");
 

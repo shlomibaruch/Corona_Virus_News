@@ -182,3 +182,7 @@ display: none;
     
 }
 
+.caruselD{
+    display: flex;
+    justify-content: center;
+}

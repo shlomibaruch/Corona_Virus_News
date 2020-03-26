@@ -7,9 +7,9 @@ export default function Nav() {
 
     return (
 
-        <div classNameName="home-page">
+        <div className="home-page">
             <nav className="nav navbar navbar-expand-lg navbar-light ">
-                <img style={{ "width": "5%", "borderRadius": '10px' }} src='https://cdn.pixabay.com/photo/2020/03/08/23/24/coronavirus-4914028__340.jpg' />
+                <img style={{ "width": "5%", "borderRadius": '10px' }} src='https://cdn.pixabay.com/photo/2020/03/08/23/24/coronavirus-4914028__340.jpg' alt='PIC'/>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -26,9 +26,9 @@ export default function Nav() {
                             <Link to='/globalCoronaPollution' className="nav-link text-white">Pollution</Link>
 
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link disabled" href="#" tabnIdex="-1" aria-disabled="true">Disabled</a>
-                        </li>
+                        {/* <li className="nav-item">
+                            <a className="nav-link disabled" href="#" tabnidex="-1" aria-disabled="true">Disabled</a>
+                        </li> */}
                     </ul>
                 </div>
             </nav>
