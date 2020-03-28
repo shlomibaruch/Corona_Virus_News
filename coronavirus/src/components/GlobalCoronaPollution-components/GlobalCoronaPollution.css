@@ -50,40 +50,6 @@ body {
    color: white;
 }
 
-@media screen and (max-width: 425px) {  
-    .input{
-        width: 200px;
-      
-    }
-
-    .table-global-pollution-head-numbers > td{
-        font-size: 15px;
-    }
-    .table-global-pollution-head > th{
-        font-size: 15px;
-    }
-  }
-
-  @media screen and (max-width: 335px) {
-    .input{
-        width: 100px;
-    }
-
-    .HistoryContainer {
-        width: 100px
-    }
-
-    .table {
-        font-size: 5px;
-    }
-
-    .history-title {
-        font-size: 5px;
-        width: 100%;
-    }
-
-   
-  }
 .button{
     border-radius: 10px;
     border: none;
@@ -123,7 +89,7 @@ body {
 }
 
 
-@media screen and (max-width: 826px) {
+@media screen and (max-width: 600px) {
      .HistoryContainer{
         width:100%;
        display: flex;
@@ -144,50 +110,55 @@ body {
 
     .table-global-pollution-head {
 
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .table-global-pollution-head-numbers {
-        font-size: 15px;
+        font-size: 16px;
     }
-    
-  }
-
-  @media screen and (max-width: 532px) {
     .table{
       
-       font-size: 10px;
-    }
+        font-size: 10px;
+     }
+     
+     .input {
+         height: 22px;
+         width: 150px;
+     }
+ 
+ 
+     .button {
+         font-size: 12px;
+         border-radius: 9px;
+         margin-left: 2px;
+     }
+ 
+     .history-title{
+         font-size: 15px;
+     }
+ 
+     .table-global-pollution-head {
+         font-size: 15px;
+     }
+ 
+     .table-country-pollution-numbers > td {
+         border-right: rgb(255, 255, 255,0.2) 1px solid;
+         bottom: 1px;
+         padding: 1px;
+     }
+ 
+     .table-global-pollution-head-numbers {
+         font-size: 15px;
+        
+     }
+ 
+     .table-country-pollution {
+         font-size: 12px;
+     }
     
-    .input {
-        height: 20px;
-        width: 50%;
-    }
-
-
-    .button {
-        font-size: 12px;
-        border-radius: 9px;
-        margin-left: 2px;
-    }
-
-    .history-title{
-        font-size: 15px;
-    }
-
-    .table-global-pollution-head {
-        font-size: 10px;
-    }
-
-    .table-global-pollution-head-numbers {
-        font-size: 10px;
-    }
-
-    .table-country-pollution {
-        font-size: 6px;
-    }
-   
   }
+
+
 
 
   @media screen and (max-width: 776px){
