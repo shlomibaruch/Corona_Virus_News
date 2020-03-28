@@ -19,7 +19,6 @@ class App extends Component {
 
  
   render() {
-    // console.log('artical from app', this.state.articel);
 
     return (
 

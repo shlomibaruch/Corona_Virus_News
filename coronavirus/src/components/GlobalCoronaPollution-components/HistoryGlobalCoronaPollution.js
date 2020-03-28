@@ -32,7 +32,7 @@ export default function HistoryGlobalCoronaPollution(props) {
             <h1 className="history-title" >History Record</h1>
             </div>
 
-            <table className="table ">
+            <table className="table table-history ">
 
                 <thead>
                     <tr>
