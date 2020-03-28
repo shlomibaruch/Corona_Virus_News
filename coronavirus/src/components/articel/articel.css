@@ -13,6 +13,31 @@
   overflow: hidden;
 
 }
+@media screen and (max-width: 768px) {
+  .CardarticelContainer {
+      width: 30%;
+  }
+  }
+
+@media screen and (max-width: 600px) {
+    .CardarticelContainer {
+        width: 45%;
+    }
+    }
+
+@media screen and (max-width: 400px) {
+
+        .CardarticelContainer {
+            width: 80%;
+        }
+        .searchInput {
+            width: 100%
+        }
+        .searchInput > input[type="text"]{
+            width: 200px
+        }
+
+}
 
 .CardarticelContainer:hover {
     transition: 0.6s;
@@ -42,25 +67,31 @@
     color: blanchedalmond;
     font-size: 15px;
 }
-.searchInput{
-    display: inline;
-}
 
-input {
+.searchInput > input {
     margin-top: 10px;
-    margin-left: 30px;
     color: white;
     background-color: rgba(2, 17, 4, 0.3);
     width: 300px;
+    align-items: center;
+
 }
 
-.input::placeholder{
+.searchInput > input::placeholder{
     color: black;
 }
-
-.button {
+.searchInput { 
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.articleButton {
     border-radius: 10px;
     border: none;
+    background-color: black;
+    color: wheat;
+    position: relative;
+    top: 5px;
 }
 
 .button:hover {

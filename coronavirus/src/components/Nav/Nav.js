@@ -9,9 +9,9 @@ export default function Nav() {
 
         <div className="home-page">
             <nav className="nav navbar navbar-expand-lg navbar-light ">
-                <img style={{ "width": "5%", "borderRadius": '10px' }} src='https://cdn.pixabay.com/photo/2020/03/08/23/24/coronavirus-4914028__340.jpg' alt='PIC'/>
+                <img style={{ "width": "10%", "borderRadius": '10px' }} src='https://cdn.pixabay.com/photo/2020/02/04/06/48/coronavirus-4817431_960_720.png' alt='PIC'/>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <span style={{'backgroundColor':'white','borderRadius':'5px'}} className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">

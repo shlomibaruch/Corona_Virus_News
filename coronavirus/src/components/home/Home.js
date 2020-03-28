@@ -65,10 +65,10 @@ export default class Home extends Component {
 
                 <div id='stayHomeDiv'></div>
 
-            <div className='solutionContainer'>
+            {/* <div className='solutionContainer'>
 
                 <Solution />
-            </div>
+            </div> */}
 
         </div>
 

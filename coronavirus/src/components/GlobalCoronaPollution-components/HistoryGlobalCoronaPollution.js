@@ -37,10 +37,10 @@ export default function HistoryGlobalCoronaPollution(props) {
                 <thead>
                     <tr>
                         {/* <th scope="col">#</th> */}
-                        <th scope="col">conutry</th>
-                        <th scope="col">total cases</th>
-                        <th scope="col">serious critical</th>
-                        <th scope="col">record date</th>
+                        <th className='thForMedia' scope="col">conutry</th>
+                        <th className='thForMedia' scope="col">total cases</th>
+                        <th className='thForMedia' scope="col">serious critical</th>
+                        <th className='thForMedia' scope="col">record date</th>
                     </tr>
                 </thead>
                 
