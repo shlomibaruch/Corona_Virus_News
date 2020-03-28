@@ -18,4 +18,23 @@
 .home-page {
     padding-top: 70px;
 }
+.navLogo{
+    width: 10%;
+    
+}
+.navbar-toggler-icon{
+background-color: rgba(104, 104, 104, 0.473);  
+border-radius: 2px;
+}
+
+@media screen and (max-width: 800px){
+    .navLogo{
+        width:20%;
+    }
+}
+@media screen and (max-width: 400px){
+    .navLogo{
+        width:30%;
+    }
+}
 

@@ -57,21 +57,17 @@ body {
         width: 200px;
       
     }
-    .HistoryContainer .table {
-       /* width: 425px */
-        /* font-size: 5px; */
-    }
     .table td {
-        padding: 0;
+        /* padding: 0; */
     }
     .table th {
-        padding: 0;
+        /* padding: 0; */
     }
     .table-global-pollution-head-numbers > td{
-        font-size: 10px;
+        font-size: 15px;
     }
     .table-global-pollution-head > th{
-        font-size: 10px;
+        font-size: 15px;
     }
   }
 
