@@ -52,10 +52,26 @@ body {
    color: white;
 }
 
-@media screen and (max-width: 435px) {
+@media screen and (max-width: 425px) {  
     .input{
         width: 200px;
       
+    }
+    .HistoryContainer .table {
+       /* width: 425px */
+        /* font-size: 5px; */
+    }
+    .table td {
+        padding: 0;
+    }
+    .table th {
+        padding: 0;
+    }
+    .table-global-pollution-head-numbers > td{
+        font-size: 10px;
+    }
+    .table-global-pollution-head > th{
+        font-size: 10px;
     }
   }
 
@@ -81,7 +97,10 @@ body {
         font-size: 5px;
     } */
   }
-
+.button{
+    border-radius: 10px;
+    border: none;
+}
 .button:hover {
     transform: scale(1.2);
     transition: 0.5s;
@@ -118,17 +137,19 @@ body {
 
 
 @media screen and (max-width: 826px) {
-    /* .HistoryContainer{
+     .HistoryContainer{
         width:100%;
-      
-    } */
-    .table-wraper{
-        display: flex;
+       display: flex;
         justify-content: center;
+        flex-direction: column;
+    }
+    .table-wraper{
        
+        position: relative;
+        left: 1%;
     }
     .table-country-pollution {
-        width: 60%;
+        width: 50%;
         font-size: 10PX;
     
     }

@@ -87,7 +87,7 @@
   margin-top: 10%;
   /* background-image: linear-gradient(red,blue,yellow); */
   height: 530px;
-  background-size: inherit;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-top: 2px solid black;

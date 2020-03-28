@@ -56,7 +56,7 @@ export default class Articel extends Component {
                 <div className='searchInput'>
                     <input type="text" onChange={(e) => { this.setState({ inputsearch: e.target.value }) }} placeholder="Search Articel..." />
 
-                    <button className="button" onClick={(e) => {
+                    <button className="articleButton" onClick={(e) => {
 
                         if (this.state.searchInput === "" || !isNaN(this.state.searchInput)) {
                             e.preventDefault()
