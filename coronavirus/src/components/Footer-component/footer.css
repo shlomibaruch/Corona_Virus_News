@@ -1,6 +1,4 @@
 
-
-
 .footer {
     position: relative;
     left: 0;
@@ -8,11 +6,6 @@
     width: 100%;
     text-align: center;
 }
-
-
-
-
-
 
 
 .mb-5 {  
@@ -28,7 +21,6 @@ justify-content: flex-start;
 .flex2 {
     width: 50%;
 }
-
 
 .fa-linkedin-in {
     background-color: rgb(6, 129, 167,0.5);

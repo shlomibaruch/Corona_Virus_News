@@ -19,16 +19,14 @@ export default function Nav() {
                             <Link to='/' className="nav-link text-white">Home</Link>
                         </li>
                         <li className="nav-item">
-                            <Link to='/articel' className="nav-link text-white" >Articel</Link>
+                            <Link to='/articel' className="nav-link text-white" >Articel's</Link>
 
                         </li>
                         <li className="nav-item">
                             <Link to='/globalCoronaPollution' className="nav-link text-white">Pollution</Link>
 
                         </li>
-                        {/* <li className="nav-item">
-                            <a className="nav-link disabled" href="#" tabnidex="-1" aria-disabled="true">Disabled</a>
-                        </li> */}
+                
                     </ul>
                 </div>
             </nav>

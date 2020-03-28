@@ -25,10 +25,8 @@ body {
 
 .table-global-pollution-head-numbers > td {
     border-left: 1px solid rgb(56, 55, 55,0.2);
-
     
 }
-
 
 .form-Search {
   
@@ -57,12 +55,7 @@ body {
         width: 200px;
       
     }
-    .table td {
-        /* padding: 0; */
-    }
-    .table th {
-        /* padding: 0; */
-    }
+
     .table-global-pollution-head-numbers > td{
         font-size: 15px;
     }
@@ -89,9 +82,7 @@ body {
         width: 100%;
     }
 
-    /* .table {
-        font-size: 5px;
-    } */
+   
   }
 .button{
     border-radius: 10px;
@@ -108,7 +99,7 @@ body {
     color: rgb(255, 255, 255, 0.9);
     border: 2px rgba(34, 32, 32, 0.3) solid;
     background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 10px 10px 10px black;
+ 
     padding: 5px;
     width: 50%;
     font-size: 20PX;
@@ -142,7 +133,7 @@ body {
     .table-wraper{
        
         position: relative;
-        left: 1%;
+        right:1%;
     }
     .table-country-pollution {
         width: 50%;
@@ -165,14 +156,23 @@ body {
   @media screen and (max-width: 532px) {
     .table{
       
-       font-size: 5px;
+       font-size: 10px;
     }
-    .HistoryHeader {
-        font-size: 5px;
+    
+    .input {
+        height: 20px;
+        width: 50%;
+    }
+
+
+    .button {
+        font-size: 12px;
+        border-radius: 9px;
+        margin-left: 2px;
     }
 
     .history-title{
-        font-size: 6px;
+        font-size: 15px;
     }
 
     .table-global-pollution-head {
@@ -187,23 +187,16 @@ body {
         font-size: 6px;
     }
    
-    
   }
 
-  @media screen and (max-width: 776px){
 
+  @media screen and (max-width: 776px){
     .f >a {
         width: 50%;
-
     }
-
-
   }
 
  
-
-
-
 .table-global-pollution-head-numbers{
     
     font-weight: bold;
@@ -219,10 +212,9 @@ body {
 }
 
 .HistoryContainer{
-    width: 60%;
+    width: 90%;
     margin: 0 auto;
     margin-top: 5%;
-    box-shadow: 25px 25px 25px rgba(0, 0, 0,0.7);
 }
 
 
@@ -252,7 +244,7 @@ display: none;
     background-color: rgba(255, 235, 205, 0.459);
     border-bottom: 5px solid black;
     border-top: 5px solid black;
-    box-shadow: 10px 10px 10px rgb(0, 0, 0);
+   
     
 }
 

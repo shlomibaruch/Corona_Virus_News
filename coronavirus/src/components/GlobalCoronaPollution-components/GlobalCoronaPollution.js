@@ -22,7 +22,6 @@ export class GlobalCoronaPollution extends Component {
 
     }
 
-
     componentDidMount() {
         axios.get('https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php?country=&rapidapi-key=9a901b3159mshad3ab2580a6127cp115cefjsn5452d8509588')
             .then(res => {
@@ -60,9 +59,7 @@ export class GlobalCoronaPollution extends Component {
 
     }
   
-
     render() {
-
 
         const elements = this.state.countryArr.map((element, index) => {
 
@@ -74,15 +71,7 @@ export class GlobalCoronaPollution extends Component {
                 <td>{element.serious_critical}</td>
             </tr>
 
-
-
-
         });
-
-    
-
-
-
 
         return (
             this.state.loading ? <div className="caruselD"><Carusel /></div> :

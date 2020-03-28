@@ -31,16 +31,11 @@
   font-weight: bold;
 }
 
-
-
 #carouselExampleSlidesOnly {
   margin-top: 100px;
 }
 .newsContainer{
   margin-top: 8%;
-  /* background-color: rgba(0, 0, 0, 0.445);
-  height: 550px;
-   */
 
 }
 .carouselContainer{
@@ -83,11 +78,10 @@
 }
 #stayHomeDiv{
   background-image: url('https://cdn.pixabay.com/photo/2020/03/22/10/48/stay-at-home-4956680_1280.jpg'),linear-gradient(rgba(255, 255, 255, 0.4),rgba(255, 255, 255, 0.6),rgba(112, 112, 112, 0.9));
-  background-attachment: local;
-  margin-top: 10%;
-  /* background-image: linear-gradient(red,blue,yellow); */
+  background-attachment: scroll;
+  margin-top: 5%;
   height: 530px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   border-top: 2px solid black;

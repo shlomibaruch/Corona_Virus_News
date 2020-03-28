@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './home.css'
-import Solution from '../solution/Solution';
-// import Carusel from '../carusel/carusel';
+// import Solution from '../solution/Solution';
 
 export default class Home extends Component {
 

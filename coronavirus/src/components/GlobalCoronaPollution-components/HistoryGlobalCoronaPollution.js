@@ -19,7 +19,6 @@ export default function HistoryGlobalCoronaPollution(props) {
     }
     let showHistoryRecord = results.map((record, index) => {
         return <tr className="HistoryContainerByName" key={index}>
-            {/* <th scope="row">{index + 1}</th> */}
             <td>{record.country_name}</td>
             <td>{record.total_cases}</td>
             <td>{record.serious_critical}</td>
@@ -36,7 +35,6 @@ export default function HistoryGlobalCoronaPollution(props) {
 
                 <thead>
                     <tr>
-                        {/* <th scope="col">#</th> */}
                         <th className='thForMedia' scope="col">conutry</th>
                         <th className='thForMedia' scope="col">total cases</th>
                         <th className='thForMedia' scope="col">serious critical</th>
