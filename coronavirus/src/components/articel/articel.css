@@ -13,12 +13,16 @@
   overflow: hidden;
 
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .CardarticelContainer {
-      width: 30%;
+      width: 20%;
   }
   }
-
+  @media screen and (max-width: 750px) {
+    .CardarticelContainer {
+        width: 30%;
+    }
+    }
 @media screen and (max-width: 600px) {
     .CardarticelContainer {
         width: 45%;

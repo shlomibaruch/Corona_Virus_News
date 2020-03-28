@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import axios from 'axios';
+// import axios from 'axios';
 import './articel.css';
 
 export default class Articel extends Component {
@@ -11,10 +11,11 @@ export default class Articel extends Component {
     }
     // search function : get the value from the search input and Sending the request from the beginning ;
 
-    serach = (inputsearch) => {
-        axios.get(`https://newsapi.org/v2/everything?q=${inputsearch}&from=2020-02-26&sortBy=publishedAt&apiKey=17d57b58c3df4dd48364cbc30503849b`)
-            .then(res => { this.setState({ articel: res.data.articles }) });
-    };
+
+    // serach = (inputsearch) => {
+    //     axios.get(`https://newsapi.org/v2/everything?q=${inputsearch}&from=2020-02-28&sortBy=publishedAt&apiKey=17d57b58c3df4dd48364cbc30503849b`)
+    //         .then(res => { this.setState({ articel: res.data.articles }) });
+    // };
 
 
     render() {
@@ -53,7 +54,7 @@ export default class Articel extends Component {
 
         return (
             <div>
-                <div className='searchInput'>
+                {/* <div className='searchInput'>
                     <input type="text" onChange={(e) => { this.setState({ inputsearch: e.target.value }) }} placeholder="Search Articel..." />
 
                     <button className="articleButton" onClick={(e) => {
@@ -67,7 +68,7 @@ export default class Articel extends Component {
                         }
 
                     }} type="submit"><i className="fa fa-search"></i></button>
-                </div>
+                </div> */}
 
                 <div className='contaier'>
                     {this.state.loading ? NEWS : NEWSearch}
