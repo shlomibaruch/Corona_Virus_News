@@ -51,7 +51,7 @@ class App extends Component {
           worldCases: res.data
         });
       });
-    axios.get('https://newsapi.org/v2/everything?q=coronavirus&from=2020-03-20&to=2020-03-20&sortBy=popularity&apiKey=17d57b58c3df4dd48364cbc30503849b')
+    axios.get('https://newsapi.org/v2/everything?q=coronavirus&from=2020-04-22&to=2020-03-20&sortBy=popularity&apiKey=17d57b58c3df4dd48364cbc30503849b')
       .then(res => {
         // console.log(res.data.articles);
         this.setState({
